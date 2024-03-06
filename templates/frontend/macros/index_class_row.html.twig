@@ -1,0 +1,10 @@
+{% macro indexClassRow( classLink, className, percentage, isLocked ) %}
+{% from "frontend/macros/horizontal_progress.html.twig" import horizontalProgress %}
+{% from "frontend/macros/lock_state.html.twig" import isLocked %}
+
+    <a href="{{classLink}}" class="flex flex--gap-25 flex--align-center no-decoration">
+        <div class="text-dark heading-4 mr-auto">{{ className }}</div>
+        {{ horizontalProgress(percentage) }}
+        {{ isLocked(isLocked) }}
+    </a>
+{% endmacro %}

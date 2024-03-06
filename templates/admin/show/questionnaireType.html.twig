@@ -1,0 +1,9 @@
+{% extends '@SonataAdmin/CRUD/base_show_field.html.twig' %}
+
+{% block field %}
+    {% if object.type == constant('App\\Entity\\Questionnaire::FULL_QUESTIONNAIRE') %}
+        Celé šetření
+    {% elseif object.type == constant('App\\Entity\\Questionnaire::CONTROL_QUESTIONNAIRE') %}
+        Kontrolní šetření
+    {% endif %}
+{% endblock %}

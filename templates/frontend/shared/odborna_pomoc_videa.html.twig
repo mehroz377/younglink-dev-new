@@ -1,0 +1,25 @@
+{% from "frontend/macros/video.html.twig" import video %}
+
+{% extends 'base_page.html.twig' %}
+
+{% block content %}
+<div class="flex flex--align-center flex--gap-100 mb-75">
+    <h1 class="heading-1 text-gradient">Co může pomoci</h1>
+</div>
+
+<div class="flex flex--align-center mb-75">
+  <a href="{{ path('app_professional_help_expert') }}" class="no-decoration button button--secondary button--s button--secondary--transparent">Odborníci</a>
+  <a href="{{ path('app_professional_help_video') }}" class="no-decoration button button--secondary button--s">Videa</a>
+  <a href="{{ path('app_professional_help_articles') }}" class="no-decoration button button--secondary button--secondary--transparent button--s">Články</a>
+</div>
+
+<div>
+  <p class="my-75 heading-4">Tady najdete videomateriály, které jsou užitečné pro udržení příjemné atmosféry ve třídách.</p>
+</div>
+
+<div class="grid grid--2-columns grid--gap-75 mb-100">
+  {% for video in videos %}
+    {{ video(video.url, video.image, video.title) }}
+  {% endfor %}
+</div>
+{% endblock %}

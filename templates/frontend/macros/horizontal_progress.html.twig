@@ -1,0 +1,11 @@
+{% macro horizontalProgress( percentage ) %}
+    <div 
+        class="horizontal-progress horizontal-progress--red {% if percentage >= 25 %}horizontal-progress--orange{% endif %} {% if percentage >= 75 %}horizontal-progress--green{% endif %}"
+        style="--percentage: {{percentage}}%;"
+    >
+        <div class="horizontal-progress__number heading-4">{{ percentage }} %</div>
+        <div class="horizontal-progress__base">
+            <div class="horizontal-progress__bar"></div>
+        </div>
+    </div>
+{% endmacro %}

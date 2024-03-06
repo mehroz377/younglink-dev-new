@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: php:8.2-fpm
+    volumes:
+      - .:/var/www/html
+    working_dir: /var/www/html
+    command: php-fpm
+    networks:
+      - app-network
+
+  caddy:
+    image: caddy:2
+    ports:
+      - "80:80"
+    volumes:
+      - ./docker/prod/caddy/Caddyfile:/etc/caddy/Caddyfile
+      - .:/var/www/html:ro
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

@@ -1,0 +1,41 @@
+{% macro odbornik( labels, firstName, lastName, specialization, tel, mail, webLink, imgUrl, description ) %}
+    <div class="odbornik rectangle rectangle--l">
+        <div class="flex flex--align-center flex--gap-25 mb-100">
+            {% for label in labels %}
+                <div class="odbornik__label heading-6">
+                    {{ label }}
+                </div>
+            {% endfor %}
+        </div>
+        <div class="flex flex--align-center flex--justify-space mb-100">
+            <div>
+                <div class="text-l">
+                    {{ firstName }}
+                </div>
+                <div class="heading-2 mb-75">
+                    {{ lastName }}
+                </div>
+                <div class="text-m mb-75">
+                    {{ specialization }}
+                </div>
+                <div class="flex flex--align-center flex--gap-25">
+                    {% if tel %}
+                    <a href="tel:{{tel}}" class="button button--circle-m button--secondary">{{ source('@svg/call.svg') }}</a>
+                    {% endif %}
+                    {% if mail %}
+                    <a href="mailto:{{mail}}" class="button button--circle-m button--secondary">{{ source('@svg/mail.svg') }}</a>
+                    {% endif %}
+                    {% if webLink %}
+                    <a href="{{webLink}}" target="_blank" class="button button--circle-m button--secondary">{{ source('@svg/web.svg') }}</a>
+                    {% endif %}
+                </div>
+            </div>
+            <div>
+                <img src="{{ imgUrl }}" alt="{{ firstName }} {{ lastName }}" class="odbornik__img">
+            </div>
+        </div>
+        <div class="text-s text-secondary">
+            {{ description|raw }}
+        </div>
+    </div>
+{% endmacro %}

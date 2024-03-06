@@ -1,0 +1,93 @@
+.button {
+    border: none;
+    border-radius: var(--radius-full, 360px);
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+
+    &:hover {
+        color: var(--text-text-dark, #251D33);
+    }
+
+    img, svg {
+        height: 20px;
+        width: auto;
+    }
+
+    &--s {
+        padding: var(--spacing-25, 6px) var(--spacing-50, 12px);
+    }
+
+    &--m {
+        padding: var(--spacing-50, 12px) var(--spacing-100, 24px);
+    }
+
+    &--circle-s {
+        width: 24px;
+        height: 24px;
+    }
+
+    &--circle-m {
+        width: 32px;
+        height: 32px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    &--primary {
+        background: var(--button-button-primary, #5846CF);
+        color: var(--text-button-primary, #FFF);
+
+        &:hover {
+            color: var(--text-button-primary, #FFF);
+            box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.25);
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), var(--button-button-primary, #5846CF);
+        }
+
+        &:disabled {
+            background: var(--button-button-primary-disabled, #7A7A7A);
+        }
+    }
+
+    &--secondary {
+        background: var(--button-button-secondary, #F1EFFD);
+        color: var(--text-text-brand, #5846CF);
+
+        &:hover {
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.10) 100%), var(--Button-button-secondary, #F1EFFD);
+            color: var(--text-text-brand, #5846CF);
+        }
+
+        &:disabled {
+            background: var(--button-button-secondary-disabled, #EAEAEA);
+            color: var(--text-text-secondary, #A6A6A6);
+        }
+
+        &--transparent {
+            background: none;
+        }
+    }
+
+    &--flex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--spacing-25, 6px);
+    }
+
+    &--flex-inline {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--spacing-25, 6px);
+    }
+}

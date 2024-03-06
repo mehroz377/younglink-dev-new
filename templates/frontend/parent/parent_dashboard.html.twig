@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    Parent Dashboard
+    {% if guardian is not null %}
+    Firstname: {{ guardian.firstname }}<br>
+    Lastname: {{ guardian.lastname }}<br>
+    Email: {{ guardian.email }}<br>
+
+    Students:
+        {% for student in guardian.students %}
+            Info<br>
+            School: {{ student.school }}<br>
+            Classroom: {{ student.classroom }}<br>
+            Firstname: {{ student.firstname }}<br>
+            Lastname: {{ student.lastname }}<br>
+            Email: {{ student.email }}<br>
+            <a href="{{ path('app_parent_student_detail',{'id':student.id}) }}">Detail studenta</a>
+
+            Timeline:
+            {% for timeline in student.classroom.timelines %}
+                School year: {{ timeline.schoolYear }}<br>
+                Classroom: {{ timeline.classroom }}<br>
+                Active: {{ timeline.active }}<br>
+                {% for questionnaire in timeline.questionnaires %}
+                    Name: {{ questionnaire.name }}<br>
+                    Position: {{ questionnaire.position }}<br>
+                    Finished: {{ questionnaire.finished }}<br>
+                {% endfor %}
+            {% endfor %}
+        {% endfor %}
+
+    {% endif %}
+{% endblock %}

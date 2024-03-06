@@ -1,0 +1,25 @@
+{% from "frontend/macros/odbornik.html.twig" import odbornik %}
+
+{% extends 'base_page.html.twig' %}
+
+{% block content %}
+<div class="flex flex--align-center flex--gap-100 mb-75">
+    <h1 class="heading-1 text-gradient">Co může pomoci</h1>
+</div>
+
+<div class="flex flex--align-center mb-75">
+  <a href="{{ path('app_professional_help_expert') }}" class="no-decoration button button--secondary button--s">Odborníci</a>
+  <a href="{{ path('app_professional_help_video') }}" class="no-decoration button button--secondary button--secondary--transparent button--s">Videa</a>
+  <a href="{{ path('app_professional_help_articles') }}" class="no-decoration button button--secondary button--secondary--transparent button--s">Články</a>
+</div>
+
+<div>
+  <p class="my-75 heading-4">Obraťte se na některého z prověřených odborníků.</p>
+</div>
+
+<div class="grid grid--2-columns grid--gap-75 mb-100">
+  {% for expert in experts %}
+    {{ odbornik(expert.labels, expert.firstname, expert.lastname, expert.specialization, expert.phone, expert.email, expert.url, expert.image, expert.description) }}
+  {% endfor %}
+</div>
+{% endblock %}

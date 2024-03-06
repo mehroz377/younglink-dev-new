@@ -1,0 +1,12 @@
+twig:
+    default_path: '%kernel.project_dir%/templates'
+    form_themes:
+        - 'admin/fileUpload.html.twig'
+        - 'admin/imageUpload.html.twig'
+        - '@SonataForm/Form/datepicker.html.twig'
+    paths:
+        '%kernel.project_dir%/assets/svg': svg
+
+when@test:
+    twig:
+        strict_variables: true

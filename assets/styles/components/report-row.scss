@@ -1,0 +1,18 @@
+.report-row {
+    &__investigation-meter {
+        min-width: 96px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__delimiter {
+        $borderWidth: 3px;
+
+        margin: var(--spacing-25, 6px) calc(48px - $borderWidth);
+        height: 38px;
+        width: 100%;
+        box-sizing: border-box;
+        border-left: $borderWidth dashed var(--other-stroke, #EAEAEA);
+    }
+}

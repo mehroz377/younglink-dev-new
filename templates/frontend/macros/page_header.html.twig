@@ -1,0 +1,24 @@
+{% macro header( userName, notification = -1, showTrustBox = false) %}
+    <header class="page-header">
+        <div class="page-header__sides">
+            <div class="page-header__side page-header__side--gap-200">
+                {% if notification >= 0 %}
+                <a href="#" class="page-header__item no-decoration text-dark heading-3"> {# TODO: Add link here #}
+                    {% if notification > 0 %} {# If we have 1 or more notifications show dot #}
+                        <span class="page-header__dot"></span>
+                    {% endif %}
+                    <img src="{{ asset('build/images/icons/notifications.svg') }}" alt="Ikona Zvonku">
+                </a>
+                {% endif %}
+                {% if showTrustBox %}
+                    <a href="#" class="page-header__item no-decoration text-dark heading-3"> {# TODO: Add link here #}
+                        <img src="{{ asset('build/images/icons/mail-lock.svg') }}" alt="Ikona Schránka důvěry">Schránka důvěry
+                    </a>
+                {% endif %}
+                <a href="#" class="page-header__item no-decoration text-dark heading-3"> {# TODO: Add link here #}
+                    <img src="{{ asset('build/images/icons/account-circle.svg') }}" alt="Ikona Profil">{{ userName }}
+                </a>
+            </div>
+        </div>
+    </header>
+{% endmacro %}

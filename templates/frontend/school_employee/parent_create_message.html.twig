@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    School employee Dashboard
+    {% if school_employee is not null %}
+    Firstname: {{ school_employee.firstname }}<br>
+    Lastname: {{ school_employee.lastname }}<br>
+    Role: {{ school_employee.schoolEmployeeRole }}<br>
+
+    {% if school_employee.schoolEmployeeRole == constant('App\\Enum\\SchoolEmployeeRole::DIRECTOR') %}
+        {# TODO DIRECTOR related #}
+    {% endif %}
+    {% if school_employee.schoolEmployeeRole == constant('App\\Enum\\SchoolEmployeeRole::ADMINISTRATOR') %}
+        {# TODO ADMINISTRATOR related #}
+    {% endif %}
+    {% if school_employee.schoolEmployeeRole == constant('App\\Enum\\SchoolEmployeeRole::PSYCHOLOGIST') %}
+        {# TODO PSYCHOLOGIST related #}
+    {% endif %}
+    {% if school_employee.schoolEmployeeRole == constant('App\\Enum\\SchoolEmployeeRole::TEACHER') %}
+        {# TODO TEACHER related #}
+    {% endif %}
+
+    School<br>
+    Name: {{ school_employee.school.name }}
+    {% endif %}
+
+    Nová zpráva
+
+    {{ form_start(form) }}
+        {{ form_row(form.target) }}
+        {{ form_row(form.messageText) }}
+        {{ form_row(form.submit) }}
+    {{ form_end(form) }}
+{% endblock %}

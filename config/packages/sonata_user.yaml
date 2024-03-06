@@ -1,0 +1,10 @@
+# config/packages/sonata_user.yaml
+
+sonata_user:
+  security_acl: true
+  class:
+    user: App\Entity\User
+  resetting:
+    email:
+      address: admin@younglink.cz
+      sender_name: Sonata Admin

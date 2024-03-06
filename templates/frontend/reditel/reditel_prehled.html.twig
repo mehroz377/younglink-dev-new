@@ -1,0 +1,40 @@
+{% import "frontend/macros/circle_progress.html.twig" as cp %}
+{% extends 'base_page.html.twig' %}
+
+{% block content %}
+    <div>
+        <h1 class="heading-1 text-gradient mb-75">Přehled školy</h1>
+    </div>
+
+    <div class="grid grid--2-columns grid--gap-75">
+        <div class="rectangle rectangle--l mb-75">
+            <div>
+                <h2 class="heading-2 mb-50 flex flex--align-center flex--gap-50"><span class="icon icon-24">{{ source('@svg/bar_chart_4_bars.svg') }}</span> Index zdravého sociálního klimatu</h2>
+            </div>
+            <div class="mb-100">
+                <span class="text-s text-secondary">Poslední průzkum 18. 4. 2023</span>
+            </div>
+            <div class="flex flex--justify-center mb-100">
+                {{ cp.progress(87, 'large', '', 'info') }}
+            </div>
+            <div class="align-center">
+                <a href="#" class="button button--secondary button--s no-decoration heading-4 flex--inline flex--align-center flex--gap-25">Detail indexu {{ source('@svg/chevron-right.svg') }}</a>
+            </div>
+        </div>
+
+        <div class="rectangle rectangle--l mb-75">
+            <div>
+                <h2 class="heading-2 mb-50 flex flex--align-center flex--gap-50"><span class="icon icon-24">{{ source('@svg/bar_chart_4_bars.svg') }}</span> Ukazatel rozložení šikany ve třídě</h2>
+            </div>
+            <div class="mb-100">
+                <span class="text-s text-secondary">Poslední průzkum 28. 2. 2023</span>
+            </div>
+            <div class="flex flex--justify-center mb-100">
+                {{ cp.progress(47, 'large', '', 'info') }}
+            </div>
+            <div class="align-center">
+                <a href="#" class="button button--secondary button--s no-decoration heading-4 flex--inline flex--align-center flex--gap-25">Detail indexu {{ source('@svg/chevron-right.svg') }}</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

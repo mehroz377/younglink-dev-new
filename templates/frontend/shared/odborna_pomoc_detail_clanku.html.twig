@@ -1,0 +1,31 @@
+{% from "frontend/macros/back_button.html.twig" import backButton %}
+{% extends 'base_page.html.twig' %}
+
+{% set backLink = path('app_professional_help_articles') %}
+{% set heroImg = article.image %}
+{% set heading = article.title %}
+{% set date = article.date|date('j.n.Y') %}
+{% set text = article.text|raw %}
+
+{% block content %}
+    <div class="flex flex--align-center flex--gap-100 mb-75">
+        {{backButton(backLink)}}<h1 class="heading-1 text-gradient">Detail článku</h1>
+    </div>
+
+    <div class="clanek-detail rectangle rectangle--no-padding rectangle--l overflow-hidden mb-100">
+        <div class="clanek-detail__hero">
+            <img src="{{heroImg}}" alt="">
+            <div class="clanek-detail__hero-heading-wrapper">
+                <h1 class="clanek-detail__hero-heading p-100 text-light heading-2">{{heading}}</h1>
+            </div>
+        </div>
+        <div class="p-100">
+            <div class="mb-50 text-secondary text-s">
+                {{date}}
+            </div>
+            <div class="text-s">
+                {{text|raw}}
+            </div>
+        </div>
+    </div>
+{% endblock %}

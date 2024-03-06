@@ -1,0 +1,17 @@
+includes:
+    - vendor/phpstan/phpstan-symfony/extension.neon
+    - vendor/phpstan/phpstan-doctrine/extension.neon
+    - ekino-banned-code.neon
+    - symplify-rules.neon
+
+parameters:
+    level: 6
+    paths:
+        - src
+        - tests
+    excludePaths:
+        - src/Kernel.php
+        - tests/bootstrap.php
+        - src/Admin/*
+    checkGenericClassInNonGenericObjectType: false
+    ignoreErrors:

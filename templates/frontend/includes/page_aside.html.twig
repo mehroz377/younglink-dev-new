@@ -1,0 +1,57 @@
+{% set heading = 'Reporty' %}
+
+<aside>
+    <div class="page-aside">
+        <div class="flex flex--align-center flex--gap-100">
+            <a href="#" class="no-decoration"> {# TODO: Add link here #}
+                <img class="page-aside__logo" src="{{ asset('build/images/logo.svg') }}" alt="YoungLink logo"/>
+            </a>
+            <span class="page-aside__delimiter"></span>
+            {% if heading != "" %}
+                <span class="page-aside__heading text-l">{{ heading }}</span>
+            {% endif %}
+        </div>
+        <div class="rectangle">
+            <header class="page-aside__header">
+                <div>
+                    <img class="page-aside__header-logo" src="https://loremflickr.com/48/48" alt="Logo instituce">
+                </div>
+                <div class="page-aside__header-details">
+                    <h2 class="heading-3">
+                        Smíchovská SPŠ a gymnázium
+                    </h2>
+                    <div class="text-s text-secondary">
+                        Preslova 72/25, 150 21 Praha 5-Smíchov
+                    </div>
+                </div>
+                <div></div>
+            </header>
+        </div>
+        <div class="page-aside__full-rectangle rectangle rectangle--full-height">
+            <div>
+                <ul class="page-aside__menu">
+                    <li class="page-aside__menu-item">
+                        <a href="#" class="page-aside__menu-link no-decoration headline-3 text-dark"><img src="{{ asset('build/images/icons/dashboard.svg') }}" alt="Přehled">Přehled</a>{# TODO: Add link here #}
+                    </li>
+                    <li class="page-aside__menu-item">
+                        <a href="#" class="page-aside__menu-link no-decoration headline-3 text-dark"><img src="{{ asset('build/images/icons/dashboard.svg') }}" alt="Přehled">Přehled</a>{# TODO: Add link here #}
+                    </li>
+                    <li class="page-aside__menu-item">
+                        <a href="#" class="page-aside__menu-link page-aside__menu-link--active no-decoration headline-3 text-dark"><img src="{{ asset('build/images/icons/dashboard.svg') }}" alt="Přehled">Přehled</a>{# TODO: Add link here #}
+                    </li>
+                </ul>
+            </div>
+            <div class="page-aside__bottom">
+                <div>
+                    <div class="button button--m button--primary button--flex heading-4" role="button">
+                        <img src="{{ asset('build/images/icons/add.svg') }}" />
+                        Vyvolat akci
+                    </div>
+                </div>
+                <div>
+                    {# Kalendář here #}
+                </div>
+            </div>
+        </div>
+    </div>
+</aside>

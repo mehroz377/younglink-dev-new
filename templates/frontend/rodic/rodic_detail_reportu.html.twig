@@ -1,0 +1,215 @@
+{% import "frontend/macros/circle_progress.html.twig" as cp %}
+{% from "frontend/macros/report_row.html.twig" import row, rowMeter %}
+{% from "frontend/macros/back_button.html.twig" import backButton %}
+{% extends 'base_page.html.twig' %}
+{% trans_default_domain 'indexes' %}
+
+{# Blok k nastavení translate messages #}
+{% if classResult.healthyRelationshipsIndex <= 0.5 %}
+    {% set healthyRelationshipMessage = "healthy_relationships.parent.low.description"|trans %}
+    {% set healthyRelationshipRecommendation = "healthy_relationships.parent.low.recommendation"|trans %}
+{% elseif classResult.healthyRelationshipsIndex > 0.5 and classResult.healthyRelationshipsIndex <= 0.75 %}
+    {% set healthyRelationshipMessage = "healthy_relationships.parent.middle.description"|trans %}
+    {% set healthyRelationshipRecommendation = "healthy_relationships.parent.middle.recommendation"|trans %}
+{% else %}
+    {% set healthyRelationshipMessage = "healthy_relationships.parent.high.description"|trans %}
+    {% set healthyRelationshipRecommendation = "healthy_relationships.parent.high.recommendation"|trans %}
+{% endif %}
+
+{% if classResult.cohesion <= 0.2 %}
+    {% set cohesionMessage = "cohesion.parent.low.description"|trans %}
+    {% set cohesionRecommendation = "cohesion.parent.low.recommendation"|trans %}
+{% elseif classResult.cohesion > 0.2 and classResult.healthyRelationshipsIndex <= 0.35 %}
+    {% set cohesionMessage = "cohesion.parent.middle.description"|trans %}
+    {% set cohesionRecommendation = "cohesion.parent.middle.recommendation"|trans %}
+{% else %}
+    {% set cohesionMessage = "cohesion.parent.high.description"|trans %}
+    {% set cohesionRecommendation = "cohesion.parent.high.recommendation"|trans %}
+{% endif %}
+
+{% if classResult.corePeriphery1 <= 0.4 %}
+    {% set corePeripheryMessage = "core_periphery.parent.low.description"|trans %}
+    {% set corePeripheryRecommendation = "core_periphery.parent.low.recommendation"|trans %}
+{% else %}
+    {% set corePeripheryMessage = "core_periphery.parent.high.description"|trans %}
+    {% set corePeripheryRecommendation = "core_periphery.parent.high.recommendation"|trans %}
+{% endif %}
+
+{% if classResult.overallReciprocity <= 0.6 %}
+    {% set overallReciprocityMessage = "overall_reciprocity.parent.low.description"|trans %}
+    {% set overallReciprocityRecommendation = "overall_reciprocity.parent.low.recommendation"|trans %}
+{% elseif classResult.overallReciprocity > 0.6 and classResult.overallReciprocity <= 0.8 %}
+    {% set overallReciprocityMessage = "overall_reciprocity.parent.middle.description"|trans %}
+    {% set overallReciprocityRecommendation = "overall_reciprocity.parent.middle.recommendation"|trans %}
+{% else %}
+    {% set overallReciprocityMessage = "overall_reciprocity.parent.high.description"|trans %}
+    {% set overallReciprocityRecommendation = "overall_reciprocity.parent.high.recommendation"|trans %}
+{% endif %}
+
+{% if classResult.aggression == 0 %}
+    {% set aggressionMessage = "aggression.parent.low.description"|trans %}
+    {% set aggressionRecommendation = "aggression.parent.low.recommendation"|trans %}
+{% elseif classResult.aggression > 0 and classResult.aggression <= 0.05 %}
+    {% set aggressionMessage = "aggression.parent.mid_low.description"|trans %}
+    {% set aggressionRecommendation = "aggression.parent.mid_low.recommendation"|trans %}
+{% elseif classResult.aggression > 0.05 and classResult.aggression <= 0.2 %}
+    {% set aggressionMessage = "aggression.parent.mid_high.description"|trans %}
+    {% set aggressionRecommendation = "aggression.parent.mid_high.recommendation"|trans %}
+{% else %}
+    {% set aggressionMessage = "aggression.parent.high.description"|trans %}
+    {% set aggressionRecommendation = "aggression.parent.high.recommendation"|trans %}
+{% endif %}
+
+{% if result.resilience > 0 and result.resilience <= 0.5 %}
+    {% set resilienceMessage = "resilience.parent.low.description"|trans %}
+    {% set resilienceRecommendation = "resilience.parent.low.recommendation"|trans %}
+{% elseif result.resilience > 0.5 and result.resilience <= 0.75 %}
+    {% set resilienceMessage = "resilience.parent.middle.description"|trans %}
+    {% set resilienceRecommendation = "resilience.parent.middle.recommendation"|trans %}
+{% else %}
+    {% set resilienceMessage = "resilience.parent.high.description"|trans %}
+    {% set resilienceRecommendation = "resilience.parent.high.recommendation"|trans %}
+{% endif %}
+
+{% if result.internalization > 0 and result.internalization <= 0.2 %}
+    {% set internalizationMessage = "internalization.parent.low.description"|trans %}
+    {% set internalizationRecommendation = "internalization.parent.low.recommendation"|trans %}
+{% elseif result.internalization > 0.2 and result.resilience <= 0.5 %}
+    {% set internalizationMessage = "internalization.parent.middle.description"|trans %}
+    {% set internalizationRecommendation = "internalization.parent.middle.recommendation"|trans %}
+{% else %}
+    {% set internalizationMessage = "internalization.parent.high.description"|trans %}
+    {% set internalizationRecommendation = "internalization.parent.high.recommendation"|trans %}
+{% endif %}
+
+{% if result.victimizationIndegree <= 0.2 %}
+    {% set victimizationIndegreeMessage = "victimization_indegree.parent.low.description"|trans %}
+    {% set victimizationIndegreeRecommendation = "victimization_indegree.parent.low.recommendation"|trans %}
+{% else %}
+    {% set victimizationIndegreeMessage = "victimization_indegree.parent.high.description"|trans %}
+    {% set victimizationIndegreeRecommendation = "victimization_indegree.parent.high.recommendation"|trans %}
+{% endif %}
+
+{% if result.closenessFriendships <= 0.2 %}
+    {% set closenessFriendshipsMessage = "closeness_friendships.parent.low.description"|trans %}
+    {% set closenessFriendshipsRecommendation = "closeness_friendships.parent.low.recommendation"|trans %}
+{% elseif result.closenessFriendships > 0.2 and result.closenessFriendships <= 0.5 %}
+    {% set closenessFriendshipsMessage = "closeness_friendships.parent.middle.description"|trans %}
+    {% set closenessFriendshipsRecommendation = "closeness_friendships.parent.middle.recommendation"|trans %}
+{% else %}
+    {% set closenessFriendshipsMessage = "closeness_friendships.parent.high.description"|trans %}
+    {% set closenessFriendshipsRecommendation = "closeness_friendships.parent.high.recommendation"|trans %}
+{% endif %}
+
+{% if result.groupIdentification <= 0.5 %}
+    {% set groupIdentificationMessage = "group_identification.parent.low.description"|trans %}
+    {% set groupIdentificationRecommendation = "group_identification.parent.low.recommendation"|trans %}
+{% else %}
+    {% set groupIdentificationMessage = "group_identification.parent.high.description"|trans %}
+    {% set groupIdentificationRecommendation = "group_identification.parent.high.recommendation"|trans %}
+{% endif %}
+
+{% block content %}
+<div class="flex flex--align-center flex--gap-100 mb-75">
+    {{backButton("#")}}<h1 class="heading-1 text-gradient">Detail reportu</h1>
+</div>
+<div>
+    <p class="my-75 heading-4">Podívejte se na podrobné vyhodnocení velkého průzkumu vztahů ve třídě.</p>
+</div>
+
+<div class="rectangle rectangle--l mb-75">
+    <h2 class="heading-2 mb-25">Mapa vztahů</h2>
+    <div>
+        SOCIOGRAM GOES HERE
+    </div>
+</div>
+<div class="rectangle rectangle--l mb-75">
+    <h2 class="heading-2 mb-100">Výsledky</h2>
+    <div>
+        <div class="rectangle rectangle--s rectangle--grey rectangle--border-none mb-100">
+            {{ rowMeter((classResult.healthyRelationshipsIndex * 100)|round, "medium", "healthy_relationships.title"|trans, 4, healthyRelationshipMessage, "", "healthy_relationships.description"|trans) }}
+            <div class="horizontal-line my-100"></div>
+            <div class="mb-100">
+                {{ rowMeter((classResult.cohesion * 100)|round, "small", "cohesion.title"|trans, 4, cohesionMessage, "", "cohesion.description"|trans) }}
+            </div>
+            <div class="mb-100">
+                {{ rowMeter((classResult.overallReciprocity * 100)|round, "small", "overall_reciprocity.title"|trans, 4, overallReciprocityMessage, "", "overall_reciprocity.description"|trans) }}
+            </div>
+            <div class="mb-100">
+                {{ rowMeter((classResult.corePeriphery1 * 100)|round, "small", "core_periphery.title"|trans, 4, corePeripheryMessage, "", "core_periphery.description"|trans) }}
+            </div>
+            <div class="">
+                {{ rowMeter((classResult.aggression * 100)|round, "small", "aggression.title"|trans, 4, aggressionMessage, "", "aggression.description"|trans) }}
+            </div>
+        </div>
+
+        <div class="rectangle rectangle--s rectangle--grey rectangle--border-none mb-100">
+            {{ rowMeter((result.resilience * 100)|round, "medium", "resilience.title"|trans, 4, resilienceMessage, "", "resilience.description"|trans) }}
+            <div class="horizontal-line my-100"></div>
+            <div class="mb-100">
+                {{ rowMeter((result.internalization * 100)|round, "small", "internalization.title"|trans, 4, internalizationMessage, "", "internalization.description"|trans) }}
+            </div>
+            <div class="mb-100">
+                {{ rowMeter((result.victimizationIndegree * 100)|round, "small", "victimization_indegree.title"|trans, 4, victimizationIndegreeMessage, "", "victimization_indegree.description"|trans) }}
+            </div>
+            <div class="mb-100">
+                {{ rowMeter((result.closenessFriendships * 100)|round, "small", "closeness_friendships.title"|trans, 4, closenessFriendshipsMessage, "", "closeness_friendships.description"|trans) }}
+            </div>
+            <div class="">
+                {{ rowMeter((result.groupIdentification * 100)|round, "small", "group_identification.title"|trans, 4, groupIdentificationMessage, "", "group_identification.description"|trans) }}
+            </div>
+        </div>
+
+        <div class="rectangle rectangle--s rectangle--grey rectangle--border-none">
+            <h3 class="heading-3 mb-100">Jak se dítě cítí ve třídě</h3>
+            <div class="grid grid--2-columns grid--gap-100">
+                {% for i in 0..3 %}
+                    <div>
+                        <h1 class="heading-1 mb-25">🤭</h1>
+                        <p class="text-xs">Lorem ipsum dolor sit amet consectetur. Eget iaculis eget cras dolor. Tincidunt sit molestie bibendum lobortis. Molestie lectus luctus dui non purus vulputate. Cras lectus in ac mattis eget amet tortor malesuada.</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="rectangle rectangle--l mb-75">
+    <h2 class="heading-2 mb-100">Doporučení</h2>
+    <div>
+        <div class="mb-100">
+            <h4 class="heading-4 mb-25">Výstupy analýzy</h4>
+            <p class="text-secondary text-xs">
+                Lukáš je velmi oblíbeným spolužákem. Podle svých spolužáků má vedoucí pozici uvnitř užší skupinky několika dětí. Zároveň však větší množství spolužáků uvedlo, že Lukáš má silné negativní vztahy s něterými jedinci. Vzhledem ke své prominentní pozici uvnitř třídy pak Lukáš může do značné míry uvlivňovat ostatní děti.
+            </p>
+        </div>
+        <div class="mb-100">
+            <h4 class="heading-4 mb-25">Na základě výsledků analýzy doporučujeme následující:</h4>
+            <ul class="text-secondary text-xs list-ul">
+                <li>{{ healthyRelationshipRecommendation }}</li>
+                <li>{{ cohesionRecommendation }}</li>
+                <li>{{ corePeripheryRecommendation }}</li>
+                <li>{{ overallReciprocityRecommendation }}</li>
+                <li>{{ aggressionRecommendation }}</li>
+                <li>{{ resilienceRecommendation }}</li>
+                <li>{{ internalizationRecommendation }}</li>
+                <li>{{ victimizationIndegreeRecommendation }}</li>
+                <li>{{ closenessFriendshipsRecommendation }}</li>
+                <li>{{ groupIdentificationRecommendation }}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="rectangle rectangle--l mb-75">
+    <h2 class="heading-2 mb-100">Knihovna materiálů</h2>
+    <div>
+        <ul>
+            {% for i in 0..2 %}
+                <li class="{% if not loop.last %}mb-100{% endif %}">
+                    <a href="#" class="no-decoration button button--secondary button--s button--flex-inline">{{ source('@svg/content-copy.svg') }}Lorem ipsum dolor.pdf</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}

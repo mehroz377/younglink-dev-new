@@ -1,0 +1,47 @@
+.horizontal-progress {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-25, 6px);
+
+    &--red {
+        --color: var(--meter-meter-bad, #E24747);
+    }
+
+    &--orange {
+        --color: var(--meter-meter-middle, #F6B66A);
+    }
+
+    &--green {
+        --color: var(--meter-meter-good, #57AE4F);
+    }
+
+    &__number {
+        color: var(--color);
+    }
+
+    &__base {
+        position: relative;
+        border-radius: 40px;
+        width: 100px;
+        height: 12px;
+        background: var(--other-stroke, #EAEAEA);
+        overflow: hidden;
+    }
+
+    &__bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0%;
+        background: var(--color);
+        animation: animHorizontalProgress 1s forwards;
+    }
+
+    @keyframes animHorizontalProgress {
+        100% {
+            width: var(--percentage);
+        }
+    }
+}

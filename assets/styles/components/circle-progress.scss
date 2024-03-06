@@ -1,0 +1,129 @@
+.circle-progress {
+    width: var(--size);
+    height: var(--size);
+    position: relative;
+
+    --bg-color: var(--surface-surface-background, #F6F6F6);
+
+    &--red {
+        --color: var(--meter-meter-bad, #E24747);
+    }
+
+    &--orange {
+        --color: var(--meter-meter-middle, #F6B66A);
+    }
+
+    &--green {
+        --color: var(--meter-meter-good, #57AE4F);
+    }
+
+    &--large {
+        .circle-progress__info {
+            svg {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+
+    &--medium {
+        .circle-progress__info {
+            transform: translateX(50%);
+
+            svg {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+
+    &--small {
+        .circle-progress__stop::after {
+            width: 1px;
+        }
+
+        .circle-progress__info {
+            transform: translateX(70%);
+            svg {
+                width: 12px;
+                height: 12px;
+            }
+        }
+    }
+
+
+    &__info {
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+    }
+
+    &__number {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: var(--color);
+        text-align: center;
+        width: 100%;
+    }
+
+    &__base {
+        width: 100%;
+        height: 100%;
+        border-radius: var(--radius-full, 360px);
+        border-width: var(--border-width);
+        border-style: solid;
+        border-color: var(--other-stroke, #EAEAEA);
+        box-sizing: border-box;
+    }
+
+    &__meter {
+        position: absolute;
+        top: 0;
+        left: 0;
+        fill: none;
+        stroke: var(--color);
+        transform: rotate(-90deg);
+        animation: animCircleProgress 1s forwards;
+    }
+
+    @keyframes animCircleProgress {
+        100% {
+            stroke-dashoffset: var(--progress);
+        }
+    }
+
+    &__stop {
+        width: 100%;
+        height: 100%;
+        border-radius: var(--radius-full, 360px);
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &--25 {
+            transform: rotate(90deg);
+        }
+
+        &--50 {
+            transform: rotate(180deg);
+        }
+
+        &--75 {
+            transform: rotate(270deg);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: var(--border-width);
+            background: var(--bg-color);
+        }
+    }
+}

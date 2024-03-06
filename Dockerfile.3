@@ -1,0 +1,64 @@
+# Stage 1: Build PHP dependencies
+FROM php:8.2-fpm-alpine AS php_base
+
+# Install PHP extensions
+RUN apk add --no-cache --virtual .build-deps \
+    icu-dev \
+    && docker-php-ext-install pdo pdo_mysql intl \
+    && apk del .build-deps
+
+# Install PHP-FPM from PHP package
+RUN docker-php-source extract \
+    && apk add --no-cache \
+    $( \
+        apk search --no-cache --quiet --exact php8.2-fpm \
+    ) \
+    && docker-php-source delete
+
+# Set working directory
+WORKDIR /var/www/html
+
+# Copy the application code
+COPY . /var/www/html
+
+
+RUN ln -s $PHP_INI_DIR/php.ini-production $PHP_INI_DIR/php.ini
+COPY docker/dev/php/conf.d/symfony.prod.ini $PHP_INI_DIR/conf.d/symfony.ini
+
+COPY docker/dev/php/php-fpm.d/zz-docker.conf /usr/local/etc/php-fpm.d/zz-docker.conf
+
+COPY docker/dev/php/docker-entrypoint.sh /usr/local/bin/docker-entrypoint
+RUN chmod +x /usr/local/bin/docker-entrypoint
+
+VOLUME /var/run/php
+
+
+# Configure PHP-FPM
+#COPY docker/dev/php/php-fpm.d/zz-docker.conf /usr/local/etc/php-fpm.d/www.conf
+
+# Install Composer
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+# Install Composer and application dependencies
+ENV COMPOSER_ALLOW_SUPERUSER=1
+COPY --from=composer /usr/bin/composer /usr/bin/composer
+ENV APP_ENV="prod"
+RUN composer install --no-dev --optimize-autoloader --no-scripts --no-progress
+
+# Stage 2: Build final image with Caddy server
+FROM caddy:alpine
+
+# Expose port 80
+EXPOSE 80
+
+# Copy built files from PHP image
+COPY --from=php_base /var/www/html /var/www/html
+
+# Set working directory
+WORKDIR /var/www/html
+
+# Copy Caddyfile
+COPY Caddyfile /etc/caddy/Caddyfile
+
+# Run Caddy server
+CMD ["caddy", "run", "--config", "/etc/caddy/Caddyfile"]

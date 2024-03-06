@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    School employee Dashboard
+    {% if school_employee is not null %}
+    Firstname: {{ school_employee.firstname }}<br>
+    Lastname: {{ school_employee.lastname }}<br>
+    Role: {{ school_employee.schoolEmployeeRole }}<br>
+
+    {% if school_employee.schoolEmployeeRole == constant('App\\Enum\\SchoolEmployeeRole::DIRECTOR') %}
+        {# TODO DIRECTOR related #}
+    {% endif %}
+    {% if school_employee.schoolEmployeeRole == constant('App\\Enum\\SchoolEmployeeRole::ADMINISTRATOR') %}
+        {# TODO ADMINISTRATOR related #}
+    {% endif %}
+    {% if school_employee.schoolEmployeeRole == constant('App\\Enum\\SchoolEmployeeRole::PSYCHOLOGIST') %}
+        {# TODO PSYCHOLOGIST related #}
+    {% endif %}
+    {% if school_employee.schoolEmployeeRole == constant('App\\Enum\\SchoolEmployeeRole::TEACHER') %}
+        {# TODO TEACHER related #}
+    {% endif %}
+
+    School<br>
+    Name: {{ school_employee.school.name }}
+    Classroom: <br>
+            Name: {{ classroom.name }}<br>
+            Timelines:<br>
+            {% for timeline in classroom.timelines %}
+                School year: {{ timeline.schoolYear }}<br>
+                Classroom: {{ timeline.classroom }}<br>
+                Active: {{ timeline.active }}<br>
+                <a href="{{ path('app_school_employee_timeline',{'id':classroom.id, 'timeline':timeline.id}) }}">Časová osa</a>
+                Questionnaires:<br>
+                {% for questionnaire in timeline.questionnaires %}
+                    Name: {{ questionnaire.name }}<br>
+                    Position: {{ questionnaire.position }}<br>
+                    Finished: {{ questionnaire.finished }}<br>
+                {% endfor %}
+            {% endfor %}
+            Students:
+            {% for student in classroom.students %}
+                Info<br>
+                School: {{ student.school }}<br>
+                Classroom: {{ student.classroom }}<br>
+                Firstname: {{ student.firstname }}<br>
+                Lastname: {{ student.lastname }}<br>
+                Email: {{ student.email }}<br>
+            {% endfor %}
+
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,333 @@
+{% import "frontend/macros/circle_progress.html.twig" as cp %}
+{% from "frontend/macros/report_row.html.twig" import row, rowMeter %}
+{% from "frontend/macros/back_button.html.twig" import backButton %}
+{% extends 'base_page.html.twig' %}
+
+
+{% trans_default_domain 'indexes' %}
+
+{# Blok k nastavení translate messages #}
+{% if result.healthyRelationshipsIndex <= 0.5 %}
+    {% set healthyRelationshipMessage = "healthy_relationships.psychologist.low.description"|trans %}
+    {% set healthyRelationshipRecommendation = "healthy_relationships.psychologist.low.recommendation"|trans %}
+{% elseif result.healthyRelationshipsIndex > 0.5 and result.healthyRelationshipsIndex <= 0.75 %}
+    {% set healthyRelationshipMessage = "healthy_relationships.psychologist.middle.description"|trans %}
+    {% set healthyRelationshipRecommendation = "healthy_relationships.psychologist.middle.recommendation"|trans %}
+{% else %}
+    {% set healthyRelationshipMessage = "healthy_relationships.psychologist.high.description"|trans %}
+    {% set healthyRelationshipRecommendation = "healthy_relationships.psychologist.high.recommendation"|trans %}
+{% endif %}
+
+{% if result.trustworthinessScore < 0.8 %}
+    {% set trustworthinessMessage = "trustworthiness_score.psychologist.low.description"|trans %}
+    {% set trustworthinessRecommendation = "trustworthiness_score.psychologist.low.recommendation"|trans %}
+{% else %}
+    {% set trustworthinessMessage = "trustworthiness_score.psychologist.high.description"|trans %}
+    {% set trustworthinessRecommendation = "trustworthiness_score.psychologist.high.recommendation"|trans %}
+{% endif %}
+
+{% if result.cohesion <= 0.2 %}
+    {% set cohesionMessage = "cohesion.psychologist.low.description"|trans %}
+    {% set cohesionRecommendation = "cohesion.psychologist.low.recommendation"|trans %}
+{% elseif result.cohesion > 0.2 and result.healthyRelationshipsIndex <= 0.35 %}
+    {% set cohesionMessage = "cohesion.psychologist.middle.description"|trans %}
+    {% set cohesionRecommendation = "cohesion.psychologist.middle.recommendation"|trans %}
+{% else %}
+    {% set cohesionMessage = "cohesion.psychologist.high.description"|trans %}
+    {% set cohesionRecommendation = "cohesion.psychologist.high.recommendation"|trans %}
+{% endif %}
+
+{% if result.corePeriphery1 <= 0.4 %}
+    {% set corePeripheryMessage = "core_periphery.psychologist.low.description"|trans %}
+    {% set corePeripheryRecommendation = "core_periphery.psychologist.low.recommendation"|trans %}
+{% else %}
+    {% set corePeripheryMessage = "core_periphery.psychologist.high.description"|trans %}
+    {% set corePeripheryRecommendation = "core_periphery.psychologist.high.recommendation"|trans %}
+{% endif %}
+
+{% if result.overallReciprocity <= 0.6 %}
+    {% set overallReciprocityMessage = "overall_reciprocity.psychologist.low.description"|trans %}
+    {% set overallReciprocityRecommendation = "overall_reciprocity.psychologist.low.recommendation"|trans %}
+{% elseif result.overallReciprocity > 0.6 and result.overallReciprocity <= 0.8 %}
+    {% set overallReciprocityMessage = "overall_reciprocity.psychologist.middle.description"|trans %}
+    {% set overallReciprocityRecommendation = "overall_reciprocity.psychologist.middle.recommendation"|trans %}
+{% else %}
+    {% set overallReciprocityMessage = "overall_reciprocity.psychologist.high.description"|trans %}
+    {% set overallReciprocityRecommendation = "overall_reciprocity.psychologist.high.recommendation"|trans %}
+{% endif %}
+
+{% if result.aggression == 0 %}
+    {% set aggressionMessage = "aggression.psychologist.low.description"|trans %}
+    {% set aggressionRecommendation = "aggression.psychologist.low.recommendation"|trans %}
+{% elseif result.aggression > 0 and result.aggression <= 0.05 %}
+    {% set aggressionMessage = "aggression.psychologist.mid_low.description"|trans %}
+    {% set aggressionRecommendation = "aggression.psychologist.mid_low.recommendation"|trans %}
+{% elseif result.aggression > 0.05 and result.aggression <= 0.2 %}
+    {% set aggressionMessage = "aggression.psychologist.mid_high.description"|trans %}
+    {% set aggressionRecommendation = "aggression.psychologist.mid_high.recommendation"|trans %}
+{% else %}
+    {% set aggressionMessage = "aggression.psychologist.high.description"|trans %}
+    {% set aggressionRecommendation = "aggression.psychologist.high.recommendation"|trans %}
+{% endif %}
+
+{# TODO vyřešit podmínky až dostaneme data #}
+{% if result.bullyCorePeriphery1 <= 1 %}
+    {% set bullyCorePeripheryMessage = "bully_core_periphery.level1.description"|trans %}
+    {% set bullyCorePeripheryRecommendation = "bully_core_periphery.level1.recommendation"|trans %}
+{% elseif result.bullyCorePeriphery1 > 1 and result.bullyCorePeriphery1 <= 2 %}
+    {% set bullyCorePeripheryMessage = "bully_core_periphery.level2.description"|trans %}
+    {% set bullyCorePeripheryRecommendation = "bully_core_periphery.level2.recommendation"|trans %}
+{% elseif result.bullyCorePeriphery1 > 2 and result.bullyCorePeriphery1 <= 3 %}
+    {% set bullyCorePeripheryMessage = "bully_core_periphery.level3.description"|trans %}
+    {% set bullyCorePeripheryRecommendation = "bully_core_periphery.level3.recommendation"|trans %}
+{% elseif result.bullyCorePeriphery1 > 3 and result.bullyCorePeriphery1 <= 4 %}
+    {% set bullyCorePeripheryMessage = "bully_core_periphery.level4.description"|trans %}
+    {% set bullyCorePeripheryRecommendation = "bully_core_periphery.level4.recommendation"|trans %}
+{% elseif result.bullyCorePeriphery1 > 4 and result.bullyCorePeriphery1 <= 5 %}
+    {% set bullyCorePeripheryMessage = "bully_core_periphery.level5.description"|trans %}
+    {% set bullyCorePeripheryRecommendation = "bully_core_periphery.level5.recommendation"|trans %}
+{% else %}
+    {% set bullyCorePeripheryMessage = "bully_core_periphery.level6.description"|trans %}
+    {% set bullyCorePeripheryRecommendation = "bully_core_periphery.level6.recommendation"|trans %}
+{% endif %}
+
+{% if result.bullyingReciprocation <= 0.5 %}
+    {% set bullyingReciprocationMessage = "bullying_reciprocation.psychologist.low.description"|trans %}
+    {% set bullyingReciprocationRecommendation = "bullying_reciprocation.psychologist.low.recommendation"|trans %}
+{% elseif result.bullyingReciprocation > 0.5 and result.bullyingReciprocation <= 0.75 %}
+    {% set bullyingReciprocationMessage = "bullying_reciprocation.psychologist.middle.description"|trans %}
+    {% set bullyingReciprocationRecommendation = "bullying_reciprocation.psychologist.middle.recommendation"|trans %}
+{% else %}
+    {% set bullyingReciprocationMessage = "bullying_reciprocation.psychologist.high.description"|trans %}
+    {% set bullyingReciprocationRecommendation = "bullying_reciprocation.psychologist.high.recommendation"|trans %}
+{% endif %}
+
+{% if result.victimDefending == 0 and result.aggression > 0.05 %}
+    {% set victimDefendingMessage = "victim_defending.psychologist.level1.description"|trans %}
+    {% set victimDefendingRecommendation = "victim_defending.psychologist.level1.recommendation"|trans %}
+{% elseif result.victimDefending == 0 %}
+    {% set victimDefendingMessage = "victim_defending.psychologist.level2.description"|trans %}
+    {% set victimDefendingRecommendation = "victim_defending.psychologist.level2.recommendation"|trans %}
+{% elseif result.victimDefending > 0 and result.victimDefending <= 0.5 %}
+    {% set victimDefendingMessage = "victim_defending.psychologist.level3.description"|trans %}
+    {% set victimDefendingRecommendation = "victim_defending.psychologist.level3.recommendation"|trans %}
+{% elseif result.victimDefending > 0.5 %}
+    {% set victimDefendingMessage = "victim_defending.psychologist.level4.description"|trans %}
+    {% set victimDefendingRecommendation = "victim_defending.psychologist.level4.recommendation"|trans %}
+{% else %}
+    {% set victimDefendingMessage = "victim_defending.psychologist.level5.description"|trans %}
+    {% set victimDefendingRecommendation = "victim_defending.psychologist.level5.description"|trans %}
+{% endif %}
+
+{% if result.totalStudents < 1 %}
+    {% set totalStudents = 1 %}
+{% else %}
+    {% set totalStudents = result.totalStudents %}
+{% endif %}
+
+{% block content %}
+    <div class="flex flex--align-center flex--gap-100 mb-75">
+        {{ backButton("#") }}<h1 class="heading-1 text-gradient">Detail reportu</h1>
+    </div>
+
+    {% set isPositive = false %} {# Pro účely napojení, bude přepínáno JS #}
+
+
+    {% if isPositive %}
+        <div class="rectangle rectangle--l mb-75">
+            <h2 class="heading-2 mb-25">Mapa vztahů</h2>
+            <div class="mb-25 flex flex--align-center">
+                <span class="no-decoration button button--secondary button--s button--flex-inline">Pozitivní vazby</span>
+                <span class="no-decoration button button--secondary button--secondary--transparent button--s button--flex-inline">Negativní vazby</span>
+            </div>
+            <div>
+                SOCIOGRAM GOES HERE
+            </div>
+        </div>
+        <div class="rectangle rectangle--l mb-75">
+            <h2 class="heading-2 mb-100">Výsledky</h2>
+            <div>
+                <div class="rectangle rectangle--s rectangle--grey rectangle--border-none">
+                    {{ rowMeter((result.healthyRelationshipsIndex * 100)|round, "medium", "healthy_relationships.title"|trans, 4, healthyRelationshipMessage,"", "healthy_relationships.description"|trans, false) }}
+                    <div class="horizontal-line my-100"></div>
+                    <div class="mb-100">
+                        {{ rowMeter((result.cohesion * 100)|round, "small", "cohesion.title"|trans, 4, cohesionMessage, "", "cohesion.description"|trans) }}
+                    </div>
+                    <div class="mb-100">
+                        {{ rowMeter((result.overallReciprocity * 100)|round, "small", "overall_reciprocity.title"|trans, 4, overallReciprocityMessage, "", "overall_reciprocity.description"|trans) }}
+                    </div>
+                    <div class="mb-100">
+                        {{ rowMeter((result.corePeriphery1 * 100)|round, "small", "core_periphery.title"|trans, 4, corePeripheryMessage, "", "core_periphery.description"|trans) }}
+                    </div>
+                    <div class="mb-100">
+                        {{ rowMeter((result.trustworthinessScore * 100)|round, "small", "trustworthiness_score.title"|trans, 4, trustworthinessMessage, "", "trustworthiness_score.description"|trans) }}
+                    </div>
+                    <div class="">
+                        {{ rowMeter((result.aggression * 100)|round, "small", "aggression.title"|trans, 4, aggressionMessage, "", "aggression.description"|trans) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="rectangle rectangle--l mb-75">
+            <h2 class="heading-2 mb-100">Doporučení</h2>
+            <div>
+                <div class="mb-100">
+                    <h4 class="heading-4 mb-25">Výstupy analýzy</h4>
+                    <p class="text-secondary text-xs">
+                        Lukáš je velmi oblíbeným spolužákem. Podle svých spolužáků má vedoucí pozici uvnitř užší
+                        skupinky několika dětí. Zároveň však větší množství spolužáků uvedlo, že Lukáš má silné
+                        negativní vztahy s něterými jedinci. Vzhledem ke své prominentní pozici uvnitř třídy pak Lukáš
+                        může do značné míry uvlivňovat ostatní děti.
+                    </p>
+                </div>
+                <div class="mb-100">
+                    <h4 class="heading-4 mb-25">Na základě výsledků analýzy doporučujeme následující:</h4>
+                    <ul class="text-secondary text-xs list-ul">
+                        <li>{{ healthyRelationshipRecommendation }}</li>
+                        <li>{{ trustworthinessRecommendation }}</li>
+                        <li>{{ cohesionRecommendation }}</li>
+                        <li>{{ corePeripheryRecommendation }}</li>
+                        <li>{{ overallReciprocityRecommendation }}</li>
+                        <li>{{ aggressionRecommendation }}</li>
+                        <li>Všímat si projevů nevraživosti Lukáše vůči jiným spolužákům.</li>
+                        <li>Všímat si projevů nevraživosti Lukáše vůči jiným spolužákům.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="rectangle rectangle--l mb-75">
+            <h2 class="heading-2 mb-100">Knihovna materiálů</h2>
+            <div>
+                <ul>
+                    {% for i in 0..2 %}
+                        <li class="{% if not loop.last %}mb-100{% endif %}">
+                            <a href="#"
+                               class="no-decoration button button--secondary button--s button--flex-inline">{{ source('@svg/content-copy.svg') }}
+                                Lorem ipsum dolor.pdf</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    {% else %}
+        <div class="rectangle rectangle--l mb-75">
+            <h2 class="heading-2 mb-25">Mapa vztahů</h2>
+            <div class="mb-25 flex flex--align-center">
+                <span class="no-decoration button button--secondary button--secondary--transparent button--s button--flex-inline">Pozitivní vazby</span>
+                <span class="no-decoration button button--secondary button--s button--flex-inline">Negativní vazby</span>
+            </div>
+            <div>
+                SOCIOGRAM GOES HERE
+            </div>
+        </div>
+        <div class="rectangle rectangle--l mb-75">
+            <h2 class="heading-2 mb-100">Výsledky</h2>
+            <div>
+                <div class="rectangle rectangle--s rectangle--grey rectangle--border-none mb-100">
+                    <h3 class="heading-3 mb-100">Jak se dítě cítí ve třídě</h3>
+                    <div class="grid grid--2-columns grid--gap-100">
+                        <div>
+                            {% if result.classroomVictims == 0 %}
+                                {% set classroomVictims = 0 %}
+                            {% else %}
+                                {% set classroomVictims = (result.classroomVictims / totalStudents * 100) %}
+                            {% endif %}
+                            {{ rowMeter(classroomVictims, "small", "classroom_victims.title"|trans, 4, "classroom_victims.description"|trans({'count': result.classroomVictims}), "") }}
+                        </div>
+                        <div>
+                            {% if result.classroomBullies == 0 %}
+                                {% set classroomBullies = 0 %}
+                            {% else %}
+                                {% set classroomBullies = (result.classroomBullies / totalStudents * 100) %}
+                            {% endif %}
+                            {{ rowMeter(classroomBullies, "small", "classroom_bullies.title"|trans, 4, "classroom_bullies.description"|trans({'%count%': result.classroomBullies}), "") }}
+                        </div>
+                        <div>
+                            {% if result.classroomDefenders == 0 %}
+                                {% set classroomDefenders = 0 %}
+                            {% else %}
+                                {% set classroomDefenders = (result.classroomDefenders / totalStudents * 100) %}
+                            {% endif %}
+                            {{ rowMeter(classroomDefenders, "small", "classroom_defenders.title"|trans, 4, "classroom_defenders.description"|trans({'%count%': result.classroomDefenders}), "") }}
+                        </div>
+                        {% if result.classroomBullyVictims == 0 %}
+                            {% set classroomBullyVictims = 0 %}
+                        {% else %}
+                            {% set classroomBullyVictims = (result.classroomBullyVictims / totalStudents * 100) %}
+                        {% endif %}
+                        {{ rowMeter(classroomBullyVictims, "small", "classroom_bully_victims.title"|trans, 4, "classroom_bully_victims.description"|trans({'%count%': result.classroomBullyVictims}), "") }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="rectangle rectangle--s rectangle--grey rectangle--border-none mb-100">
+                {{ rowMeter((result.bullyCorePeriphery1 * 100)|round, "medium", "bully_core_periphery.title"|trans, 4, bullyCorePeripheryMessage, "", "-") }}
+                <div class="horizontal-line my-100"></div>
+                <div class="grid grid--2-columns grid--gap-100">
+                    <div>
+                        <p class="text-xs text-dark">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione
+                            voluptatem blanditiis iusto quidem voluptates quia, vitae quod recusandae in hic
+                            voluptatibus deserunt fugit, veritatis et facere officiis aspernatur voluptatum
+                            corporis!</p>
+                    </div>
+                    <div>
+                        <p class="text-xs text-dark">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione
+                            voluptatem blanditiis iusto quidem voluptates quia, vitae quod recusandae in hic
+                            voluptatibus deserunt fugit, veritatis et facere officiis aspernatur voluptatum
+                            corporis!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rectangle rectangle--s rectangle--grey rectangle--border-none mb-100">
+                <div class="mb-100">
+                    {{ rowMeter((result.bullyingReciprocation * 100)|round, "small", "bullying_reciprocation.title"|trans, 4, bullyingReciprocationMessage, "", "bullying_reciprocation.description"|trans) }}
+                </div>
+                <div class="mb-100">
+                    {{ rowMeter((result.victimDefending * 100)|round, "small", "victim_defending.title"|trans, 4, victimDefendingMessage, "", "victim_defending.description"|trans, false) }}
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="rectangle rectangle--l mb-75">
+            <h2 class="heading-2 mb-100">Doporučení</h2>
+            <div>
+                <div class="mb-100">
+                    <h4 class="heading-4 mb-25">Výstupy analýzy</h4>
+                    <p class="text-secondary text-xs">
+                        Lukáš je velmi oblíbeným spolužákem. Podle svých spolužáků má vedoucí pozici uvnitř užší
+                        skupinky několika dětí. Zároveň však větší množství spolužáků uvedlo, že Lukáš má silné
+                        negativní vztahy s něterými jedinci. Vzhledem ke své prominentní pozici uvnitř třídy pak Lukáš
+                        může do značné míry uvlivňovat ostatní děti.
+                    </p>
+                </div>
+                <div class="mb-100">
+                    <h4 class="heading-4 mb-25">Na základě výsledků analýzy doporučujeme následující:</h4>
+                    <ul class="text-secondary text-xs list-ul">
+                        <li>{{ bullyCorePeripheryRecommendation }}</li>
+                        <li>{{ bullyingReciprocationRecommendation }}</li>
+                        <li>{{ victimDefendingRecommendation }}</li>
+                        <li>Všímat si projevů nevraživosti Lukáše vůči jiným spolužákům.</li>
+                        <li>Všímat si projevů nevraživosti Lukáše vůči jiným spolužákům.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="rectangle rectangle--l mb-75">
+            <h2 class="heading-2 mb-100">Knihovna materiálů</h2>
+            <div>
+                <ul>
+                    {% for i in 0..2 %}
+                        <li class="{% if not loop.last %}mb-100{% endif %}">
+                            <a href="#"
+                               class="no-decoration button button--secondary button--s button--flex-inline">{{ source('@svg/content-copy.svg') }}
+                                Lorem ipsum dolor.pdf</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

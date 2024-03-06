@@ -1,0 +1,18 @@
+{% macro clanek( imgUrl, date, text, link ) %}
+    <article class="clanek rectangle rectangle--no-padding rectangle--l overflow-hidden">
+        <a href="{{link}}">
+            <img src="{{imgUrl}}" alt="">
+        </a>
+        <div class="p-100">
+            <div class="text-s text-secondary mb-50">
+                {{date}}
+            </div>
+            <div class="heading-5 mb-50">
+                {{text}}
+            </div>
+            <div>
+                <a href="{{link}}" class="button button--s button--secondary button--flex-inline flex--align-center no-decoration">Číst článek{{ source('@svg/chevron-right.svg') }}</a>
+            </div>
+        </div>
+    </article>
+{% endmacro %}

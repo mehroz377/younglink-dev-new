@@ -1,0 +1,55 @@
+{% from "frontend/macros/report_row.html.twig" import investigation %}
+{% extends 'base_page.html.twig' %}
+
+{% block content %}
+    <div>
+        <h1 class="heading-1 text-gradient mb-75">Časová osa</h1>
+    </div>
+
+    <div class="rectangle rectangle--l mb-75">
+        <h2 class="heading-2 mb-100">Sumarizace</h2>
+        <div class="flex flex--gap-75 align-center">
+            <div class="rectangle rectangle--grey rectangle--s rectangle--spacing-50 rectangle--border-none">
+                <div class="text-s text-secondary mb-25">Ve školním roce proběhlo šetření</div>
+                <div class="heading-4">4 ze 7</div>
+            </div>
+            <div class="rectangle rectangle--grey rectangle--s rectangle--spacing-50 rectangle--border-none">
+                <div class="text-s text-secondary mb-25">Ve školním roce proběhlo šetření</div>
+                <div class="heading-4 text-meter-bad">4 ze 7</div>
+            </div>
+            <div class="rectangle rectangle--grey rectangle--s rectangle--spacing-50 rectangle--border-none">
+                <div class="text-s text-secondary mb-25">Ve školním roce proběhlo šetření</div>
+                <div class="heading-4 text-meter-middle">4 ze 7</div>
+            </div>
+            <div class="rectangle rectangle--grey rectangle--s rectangle--spacing-50 rectangle--border-none">
+                <div class="text-s text-secondary mb-25">Ve školním roce proběhlo šetření</div>
+                <div class="heading-4 text-meter-good">4 ze 7</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="rectangle rectangle--l mb-75">
+        {{ investigation(75, "medium", "Míra vlivu žáka ve třídě/sociální centralita", 4, "Lorem ipsum dolor sit amet consectetur. Eget iaculis eget cras dolor. Tincidunt sit molestie bibendum lobortis. Molestie lectus luctus dui non purus vulputate. Cras lectus in ac mattis eget amet tortor malesuada.", "Září 2023", "#", '#') }}
+        <div class="report-row__delimiter"></div>
+        {{ investigation(50, "small", "Míra vlivu žáka ve třídě/sociální centralita", 4, "Lorem ipsum dolor sit amet consectetur. Eget iaculis eget cras dolor. Tincidunt sit molestie bibendum lobortis. Molestie lectus luctus dui non purus vulputate. Cras lectus in ac mattis eget amet tortor malesuada.", "Září 2023", "#", '#') }}
+        <div class="report-row__delimiter"></div>
+        {{ investigation(25, "medium", "Míra vlivu žáka ve třídě/sociální centralita", 4, "Lorem ipsum dolor sit amet consectetur. Eget iaculis eget cras dolor. Tincidunt sit molestie bibendum lobortis. Molestie lectus luctus dui non purus vulputate. Cras lectus in ac mattis eget amet tortor malesuada.", "Září 2023", "#", '#') }}
+
+        <div class="rectangle rectangle--border-none rectangle--error mt-50">
+            <div class="flex flex--gap-25 flex--align-center text-s text-error mb-25">
+                <div>{{ source('@svg/warning.svg') }}</div>
+                <div>Vzhledem ke zhoršujícím se výsledkům předchozích kontrolních šetření doporučujeme vyvolat velké obecné šetření s předstihem.</div>
+                <div class="text-secondary">{{ source('@svg/info.svg') }}</div>
+            </div>
+            <div>
+                <a href="#" class="button button--s no-decoration heading-5 text-secondary flex flex--align-center flex--gap-25">Přidat velké šetření {{ source('@svg/add.svg') }}</a>
+            </div>
+        </div>
+        <div class="report-row__delimiter"></div>
+        {{ investigation(-1, "medium", "Míra vlivu žáka ve třídě/sociální centralita", 4, "Lorem ipsum dolor sit amet consectetur. Eget iaculis eget cras dolor. Tincidunt sit molestie bibendum lobortis. Molestie lectus luctus dui non purus vulputate. Cras lectus in ac mattis eget amet tortor malesuada.", "Září 2023", "#", '#') }}
+        <div class="report-row__delimiter"></div>
+        {{ investigation(-1, "small", "Míra vlivu žáka ve třídě/sociální centralita", 4, "Lorem ipsum dolor sit amet consectetur. Eget iaculis eget cras dolor. Tincidunt sit molestie bibendum lobortis. Molestie lectus luctus dui non purus vulputate. Cras lectus in ac mattis eget amet tortor malesuada.", "Září 2023", "#", '#') }}
+        <div class="report-row__delimiter"></div>
+        {{ investigation(-1, "medium", "Míra vlivu žáka ve třídě/sociální centralita", 4, "Lorem ipsum dolor sit amet consectetur. Eget iaculis eget cras dolor. Tincidunt sit molestie bibendum lobortis. Molestie lectus luctus dui non purus vulputate. Cras lectus in ac mattis eget amet tortor malesuada.", "Září 2023", "#", '#') }}
+    </div>
+{% endblock %}

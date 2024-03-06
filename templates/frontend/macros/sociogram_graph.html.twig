@@ -1,0 +1,13 @@
+{% macro sociogramGraph( reportData, dataset, genderIcons, target = "sociogram" ) %} {# Modify target in cases there might be more sociograms on one page #}
+<script>
+    var reportAllData = {{ reportData|json_encode()|raw }};
+</script>
+<script type="text/javascript">            
+    window.addEventListener("load", () => {
+        drawSociogram(reportAllData, "{{ dataset }}", {male:'{{genderIcons.male}}', female:'{{genderIcons.female}}'}, "{{ target }}");
+    });
+</script>
+<div class="sociogram__wrapper">
+    <div id="{{ target }}" class="sociogram"></div>
+</div>
+{% endmacro %}

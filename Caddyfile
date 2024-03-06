@@ -1,0 +1,14 @@
+{
+    http_port 80
+    https_port 443
+}
+
+:80 {
+
+    root * /var/www/html/public
+    file_server
+    php_fastcgi unix//var/run/php/php-fpm.sock
+    encode gzip
+}
+
+

@@ -1,0 +1,9 @@
+{% extends '@SonataAdmin/CRUD/base_show_field.html.twig' %}
+
+{% block field %}
+    {% if object.gender == constant('App\\Enum\\Gender::MALE') %}
+        Muž
+    {% elseif object.gender == constant('App\\Enum\\Gender::FEMALE') %}
+        Žena
+    {% endif %}
+{% endblock %}

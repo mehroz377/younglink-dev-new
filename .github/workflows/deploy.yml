@@ -1,0 +1,39 @@
+name: Deploy to Azure App Service
+
+on:
+#  push:
+#    tags:
+#      - '*'
+  workflow_dispatch:
+
+permissions:
+      id-token: write
+      contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Log in to Azure Container Registry
+      uses: azure/login@v1
+      with:
+        client-id: ${{ secrets.AZURE_CLIENT_ID}}
+        tenant-id: ${{ secrets.AZURE_TENANT_ID}}
+       #subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID}}
+        allow-no-subscriptions: true      
+
+    - uses: azure/docker-login@v1
+      with:
+        login-server: younglinkregistry.azurecr.io
+        username: ${{ secrets.REGISTRY_USERNAME }}
+        password: ${{ secrets.REGISTRY_PASSWORD }}
+
+    - name: Deploy to Azure App Service
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: 'younglink-app'
+        images: 'younglinkregistry.azurecr.io/myapp:${{ github.sha }}'
+        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}

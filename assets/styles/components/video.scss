@@ -1,0 +1,17 @@
+.video {
+    &__play {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            width: 36px;
+            height: 36px;
+        }
+    }
+}

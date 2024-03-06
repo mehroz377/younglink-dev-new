@@ -1,0 +1,39 @@
+.my-75 {
+    margin: var(--spacing-75, 18px) 0;
+}
+
+.my-100 {
+    margin: var(--spacing-100, 24px) 0;
+}
+
+.mb-25 {
+    margin-bottom: var(--spacing-25, 6px);
+}
+
+.mb-50 {
+    margin-bottom: var(--spacing-50, 12px);
+}
+
+.mb-75 {
+    margin-bottom: var(--spacing-75, 18px);
+}
+
+.mb-100 {
+    margin-bottom: var(--spacing-100, 24px);
+}
+
+.mt-25 {
+    margin-top: var(--spacing-25, 6px);
+}
+
+.mt-50 {
+    margin-top: var(--spacing-50, 12px);
+}
+
+.mr-auto {
+    margin-right: auto;
+}
+
+.p-100 {
+    padding: var(--spacing-100, 24px);
+}

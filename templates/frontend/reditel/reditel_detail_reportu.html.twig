@@ -1,0 +1,100 @@
+{% import "frontend/macros/circle_progress.html.twig" as cp %}
+{% from "frontend/macros/report_row.html.twig" import row, rowMeter %}
+{% from "frontend/macros/back_button.html.twig" import backButton %}
+{% extends 'base_page.html.twig' %}
+
+{% block content %}
+<div class="flex flex--align-center flex--gap-100 mb-75">
+    {{backButton("#")}}<h1 class="heading-1 text-gradient">Detail reportu</h1>
+</div>
+<div>
+    <p class="my-75 heading-4">Podívejte se na podrobné vyhodnocení velkého průzkumu vztahů ve třídě.</p>
+</div>
+
+<div class="rectangle rectangle--l mb-75">
+    <h2 class="heading-2 mb-25">Mapa vztahů</h2>
+    <div>
+        SOCIOGRAM GOES HERE
+    </div>
+</div>
+<div class="rectangle rectangle--l mb-75">
+    <h2 class="heading-2 mb-100">Výsledky</h2>
+    <div>
+        <div class="rectangle rectangle--s rectangle--grey rectangle--border-none mb-100">
+            {{ rowMeter((result.influence * 100)|round, "small", "Míra vlivu žáka ve třídě/sociální centralita", 4, "Lorem ipsum dolor sit amet consectetur. Eget iaculis eget cras dolor. Tincidunt sit molestie bibendum lobortis. Molestie lectus luctus dui non purus vulputate. Cras lectus in ac mattis eget amet tortor malesuada.", "", "Some info about the graph") }}
+        </div>
+        <div class="rectangle rectangle--s rectangle--grey rectangle--border-none mb-100">
+            {{ rowMeter((result.degree * 100)|round, "medium", "Popularita žáka", 4, "Lorem ipsum dolor sit amet consectetur. Eget iaculis eget cras dolor. Tincidunt sit molestie bibendum lobortis. Molestie lectus luctus dui non purus vulputate. Cras lectus in ac mattis eget amet tortor malesuada.", "", "Some info about the graph") }}
+            <div class="horizontal-line my-100"></div>
+                <div class="">
+                    {{ rowMeter((result.leadership * 100)|round, "medium", "Míra líderství ve skupině", 4, "Lorem ipsum dolor sit amet consectetur. Eget iaculis eget cras dolor. Tincidunt sit molestie bibendum lobortis. Molestie lectus luctus dui non purus vulputate. Cras lectus in ac mattis eget amet tortor malesuada.", "", "Some info about the graph") }}
+                </div>
+        </div>
+        <div class="rectangle rectangle--s rectangle--grey rectangle--border-none mb-100">
+            {{ row("Identifikace žáka s jemu přidělenou skupinou", 3, "Lorem ipsum dolor sit amet consectetur. Eget iaculis eget cras dolor. Tincidunt sit molestie bibendum lobortis. Molestie lectus luctus dui non purus vulputate. Cras lectus in ac mattis eget amet tortor malesuada.", "", "Some info about the graph" ) }}
+        </div>
+
+        <div class="rectangle rectangle--s rectangle--grey rectangle--border-none mb-100">
+            {{ rowMeter((result.resilience * 100)|round, "medium", "Index odolnosti žáka", 4, 'Lorem ipsum dolor sit amet consectetur. Eget iaculis eget cras dolor. Tincidunt sit molestie bibendum lobortis. Molestie lectus luctus dui non purus vulputate. Cras lectus in ac mattis eget amet tortor malesuada.', "", "Some info about the graph") }}
+            <div class="horizontal-line my-100"></div>
+                <div class="mb-100">
+                    {{ rowMeter((result.internalization * 100)|round, "small", "Míra internalizace žáka", 4, "Lorem ipsum dolor sit amet consectetur. Eget iaculis eget cras dolor. Tincidunt sit molestie bibendum lobortis. Molestie lectus luctus dui non purus vulputate. Cras lectus in ac mattis eget amet tortor malesuada.", "", "Some info about the graph") }}
+                </div>
+                <div class="mb-100">
+                    {{ rowMeter((result.victimizationIndegree * 100)|round, "small", "Míra viktimizace žáka", 4, "Lorem ipsum dolor sit amet consectetur. Eget iaculis eget cras dolor. Tincidunt sit molestie bibendum lobortis. Molestie lectus luctus dui non purus vulputate. Cras lectus in ac mattis eget amet tortor malesuada.", "", "Some info about the graph") }}
+                </div>
+                <div class="mb-100">
+                    {{ rowMeter((result.closenessFriendships * 100)|round, "small", "Míra blízkosti žáka k ostatním spolužákům", 4, "Lorem ipsum dolor sit amet consectetur. Eget iaculis eget cras dolor. Tincidunt sit molestie bibendum lobortis. Molestie lectus luctus dui non purus vulputate. Cras lectus in ac mattis eget amet tortor malesuada.", "", "Some info about the graph") }}
+                </div>
+                <div class="">
+                    {{ rowMeter((result.groupIdentification * 100)|round, "small", "Míra přijetí žáka v jeho vlastní skupině", 4, "Lorem ipsum dolor sit amet consectetur. Eget iaculis eget cras dolor. Tincidunt sit molestie bibendum lobortis. Molestie lectus luctus dui non purus vulputate. Cras lectus in ac mattis eget amet tortor malesuada.", "", "Some info about the graph") }}
+                </div>
+        </div>
+
+        <div class="rectangle rectangle--s rectangle--grey rectangle--border-none">
+            <h3 class="heading-3 mb-100">Jak se dítě cítí ve třídě</h3>
+            <div class="grid grid--2-columns grid--gap-100">
+                {% for i in 0..3 %}
+                    <div>
+                        <h1 class="heading-1 mb-25">🤭</h1>
+                        <p class="text-xs">Lorem ipsum dolor sit amet consectetur. Eget iaculis eget cras dolor. Tincidunt sit molestie bibendum lobortis. Molestie lectus luctus dui non purus vulputate. Cras lectus in ac mattis eget amet tortor malesuada.</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="rectangle rectangle--l mb-75">
+    <h2 class="heading-2 mb-100">Doporučení</h2>
+    <div>
+        <div class="mb-100">
+            <h4 class="heading-4 mb-25">Výstupy analýzy</h4>
+            <p class="text-secondary text-xs">
+                Lukáš je velmi oblíbeným spolužákem. Podle svých spolužáků má vedoucí pozici uvnitř užší skupinky několika dětí. Zároveň však větší množství spolužáků uvedlo, že Lukáš má silné negativní vztahy s něterými jedinci. Vzhledem ke své prominentní pozici uvnitř třídy pak Lukáš může do značné míry uvlivňovat ostatní děti.
+            </p>
+        </div>
+        <div class="mb-100">
+            <h4 class="heading-4 mb-25">Na základě výsledků analýzy doporučujeme následující:</h4>
+            <ul class="text-secondary text-xs list-ul">
+                <li>Všímat si projevů nevraživosti Lukáše vůči jiným spolužákům.</li>
+                <li>Všímat si projevů nevraživosti Lukáše vůči jiným spolužákům.</li>
+                <li>Všímat si projevů nevraživosti Lukáše vůči jiným spolužákům.</li>
+                <li>Všímat si projevů nevraživosti Lukáše vůči jiným spolužákům.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="rectangle rectangle--l mb-75">
+    <h2 class="heading-2 mb-100">Knihovna materiálů</h2>
+    <div>
+        <ul>
+            {% for i in 0..2 %}
+                <li class="{% if not loop.last %}mb-100{% endif %}">
+                    <a href="#" class="no-decoration button button--secondary button--s button--flex-inline">{{ source('@svg/content-copy.svg') }}Lorem ipsum dolor.pdf</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}

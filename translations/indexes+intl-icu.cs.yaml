@@ -1,0 +1,655 @@
+healthy_relationships:
+  title: 'Index zdravých vztahů'
+  description: 'Index zdravých vztahů je průvodce tím, jak to ve třídě funguje. Říká nám, jak moc se spolu žáci kamarádí, jestli spolu rádi tráví čas, a jestli nevzniká někde problém. Index počítáme pomocí hodnocení čtyř různých ukazatelů. Pokud bude mít jeden z nich nízkou hodnotu, zhorší se i celkový výsledek Indexu zdravých vztahů.'
+  children:
+    low:
+      description: 'Tady můžeš vidět, jak to ve vaší třídě vypadá s kamarádstvím a vztahy mezi spolužáky. Prostě jak se k sobě chováte navzájem. Smutný smajlík znamená, že si možná mezi sebou nerozumí všichni. Někdo se může cítit osamělý, někdo se třeba i snaží ostatním ublížit. To není moc fajn. Co s tím společně uděláme? Můžete se poradit s učiteli, rodiči, a taky s ostatními spolužáky. Určitě se vám to povede dohromady zlepšit.'
+      recommendation: 'Možná si všímáš, že ve vaší třídě by se na kolektivu dalo ještě zapracovat. Nezapomeň, že všichni táhnete za jeden provaz. Jaký máš z atmosféry ve třídě pocit ty? Zkus si o tom mluvit se školním psychologem, ale i učiteli a rodiči. Pokud nabídnou nějakou pomoc, zkus se do ní zapojit. Oporou ti kromě dospělých můžou být i kamarádi.'
+    middle:
+      description: 'Tady můžeš vidět, jak to ve vaší třídě vypadá s kamarádstvím a vztahy mezi spolužáky. Prostě jak se k sobě chováte navzájem. neutrální smajlík znamená, že se k sobě snažíte chovat hezky, ale někdy se to třeba nepodaří. Možná někteří z vás nemají moc kamarádů a cítí se osamělí. Co s tím společně uděláme? Můžete se poradit s učiteli, rodiči, a taky s ostatními spolužáky. Určitě se vám to povede dohromady zlepšit.'
+      recommendation: 'Možná, že u vás ve třídě není poslední dobou všechno fajn. Nezapomeň, že všichni táhnete za jeden provaz. Někdo ze spolužáků se možná necítí v kolektivu bezpečně, nebo je pro něj těžké se zapojit. Zkus se s takovými spolužáky skamarádit a pomoci jim – a všem dohromady vám bude mnohem lépe.'
+    high:
+      description: 'Tady můžeš vidět, jak to ve vaší třídě vypadá s kamarádstvím a vztahy mezi spolužáky. Prostě jak se k sobě chováte navzájem. Veselý smajlík je super zpráva – znamená to, že si mezi sebou rozumíte a navzájem jste kamarádi. Jak to udělat, aby vám to vydrželo? Popovídejte si o tom s učiteli, rodiči, a taky s ostatními spolužáky. Dohromady určitě vymyslíte, jak na to, abyste si kamarádství ve třídě udrželi.'
+      recommendation: 'Vypadá to, že je vám se spolužáky ve třídě dobře. Nemusí to ale platit pro všechny – pokud si všimneš, že někdo potřebuje podporu, zkus mu pomoci. '
+  parent:
+    low:
+      description: 'Nízký Index zdravých vztahů ve třídě naznačuje, že spolu děti nevychází tak dobře. Je možné, že některé z nich nemají mnoho kamarádů, nebo přátelství nejsou opětovaná. Děti se mohou cítit osaměle, atmosféra ve třídě může být až nepřátelská. Kontaktujte třídního učitele pro konkrétnější informace. Co teď můžete dělat vy? Zeptejte se svého dítěte, jak se ve třídě cítí a s kým se kamarádí. Naslouchejte mu a podporujte ho v tom, aby s ostatními dobře vycházelo. Ukažte mu, jak je důležité projevovat soucit, brát ohled na pocity ostatních, ale také nechat si pomoci a řešit konflikty asertivně. Povídejte si o svých pocitech a hledejte řešení společně. Můžete také spolužáky například pozvat domů, aby se děti lépe poznaly. Celkově jde hlavně o to jít v budování a udržování vztahů příkladem – tím se děti naučí nejvíce. Způsob, jak si najít nové přátele, je také podpora zájmů a koníčků dítěte, ve kterých se může potkat s ostatními dětmi s podobnými zájmy.'
+      recommendation: 'Vztahy ve třídě vašeho dítěte se nejeví jako příliš zdravé. Zkuste si s dítětem popovídat o tom, jak to vnímá, a podporujte ho v budování zdravých vazeb. Třída by měla být bezpečným místem pro všechny děti – informujte se u školního psychologa nebo třídního učitele, co mají pro zlepšení kolektivu v plánu.'
+    middle:
+      description: 'Střední hodnota Indexu zdravých vztahů ve třídě naznačuje, že si děti mezi sebou víceméně rozumí. Obvykle si nijak neubližují a vztahy jsou poměrně rovnocenné. Je tu ale prostor ke zlepšení a někteří žáci se ve třídě nemusejí cítit dobře. Co můžete udělat vy? Zeptejte se svého dítěte, jak se ve třídě cítí a s kým se kamarádí. Naslouchejte mu a podporujte ho v tom, aby s ostatními dobře vycházelo. Ukažte mu, jak je důležité projevovat soucit, brát ohled na pocity ostatních, ale také nechat si pomoci a řešit konflikty asertivně. Povídejte si o svých pocitech a hledejte řešení společně. Můžete také spolužáky například pozvat domů, aby se děti lépe poznaly. Celkově jde hlavně o to jít v budování a udržování vztahů příkladem – tím se děti naučí nejvíce. Způsob, jak si najít nové přátele, je také podpora zájmů a koníčků dítěte, ve kterých se může potkat s ostatními dětmi s podobnými zájmy.'
+      recommendation: 'Vztahy ve třídě vašeho dítěte nejsou optimální, ale ani vyloženě nezdravé. Podporujte dítě v účasti na školních aktivitách. Můžete přispět také tím, že pomůžete zorganizovat setkání s ostatními rodiči.'
+    high:
+      description: 'Vysoká hodnota Indexu zdravých vztahů naznačuje, že vztahy ve třídě jsou skutečně dobré. Děti si mezi sebou rozumí, kamarádí spolu a snaží se, aby nikdo nezůstal stranou. Nepřátelské chování je spíše výjimečné. K udržení současného stavu můžete přispět i vy. Co konkrétně se dá dělat? Zeptejte se svého dítěte, jak se ve třídě cítí a s kým se kamarádí. Naslouchejte mu a podporujte ho v tom, aby s ostatními dobře vycházelo. Ukažte mu, jak je důležité projevovat soucit, brát ohled na pocity ostatních, ale také nechat si pomoci a řešit konflikty asertivně. Povídejte si o svých pocitech a hledejte řešení společně. Můžete také spolužáky například pozvat domů, aby se děti lépe poznaly. Celkově jde hlavně o to jít v budování a udržování vztahů příkladem – tím se děti naučí nejvíce. Způsob, jak si najít nové přátele, je také podpora zájmů a koníčků dítěte, ve kterých se může potkat s ostatními dětmi s podobnými zájmy.'
+      recommendation: 'Vztahy ve třídě vašeho dítěte vypadají zdravě. Podporujte dítě, aby se zajímalo o pocity ostatních a pečovalo o svá kamarádství.'
+  teacher:
+    low:
+      description: 'Nízká hodnota Indexu zdravých vztahů ukazuje, že zdravé vztahy ve třídě jsou ohroženy. Možná se žákům nedaří rozvíjet přátelství, vztahy nejsou opětované, nebo se někdo cítí být z kolektivu vyřazen. Je také možné, že dochází k nepřátelskému chování žáků mezi sebou. Rozklikněte si Index zdravých vztahů a prozkoumejte jednotlivé ukazatele – díky tomu můžete odhalit, s čím má třída konkrétně potíž. Ke zlepšení Indexu zdravých vztahů můžete jako učitel přispět například skupinovými aktivitami, podporou otevřené komunikace a vytvářením podpůrné atosféry pro žáky.'
+      recommendation: 'Index zdravých vztahů ve třídě je nízký. Vysledujte, kteří žáci by mohli potřebovat individuální podporu, a na jednotlivých krocích ke zlepšení atmosféry ve třídě spolupracujte s psychologem.'
+    middle:
+      description: 'Hodnota Indexu zdravých vztahů je v této třídě průměrná. To znamená, že se ve třídě daří držet nepřátelské chování na nižší úrovni, kamarádské vztahy jsou rovnoměrně rozloženy, a také většinou opětovány. Je zde ale prostor ke zlepšení – jako učitel můžete zorganizovat team-buildingová cvičení, podporovat empatii a vzdělávat žáky v řešení konfliktů k posílení zdravých vztahů ve třídě.'
+      recommendation: 'Index zdravých vztahů ve třídě by mohl být lepší. Zkuste atmosféře ve třídě pomoci například skupinovými aktivitami. To by mělo podpořit týmové prostředí a také rovnocenné vztahy.'
+    high:
+      description: 'Vysoká hodnota Indexu zdravých vztahů ukazuje, že se žákům v této třídě podařilo vytvořit si mezi sebou silný a podpůrný kolektiv, který neinklinuje k nepřátelskému chování. K udržení vysokých hodnot Indexu zdravých vztahů se můžete jako učitel snažit posilovat ve třídě spolupráci, respekt a laskavost.'
+      recommendation: 'Index zdravých vztahů je v této třídě v pořádku. Dobrou atmosféru můžete udržet tím, že budete žáky podporovat v jejich sociálním rozvoji.'
+  psychologist:
+    low:
+      description: 'Nízká hodnota Indexu zdravých vztahů ukazuje, že zdravé vztahy ve třídě jsou ohroženy. Možná se žákům nedaří rozvíjet přátelství, vztahy nejsou opětované, nebo se někdo cítí být z kolektivu vyřazen. Je také možné, že dochází k nepřátelskému chování žáků mezi sebou. Rozklikněte si Index zdravých vztahů a prozkoumejte jednotlivé ukazatele – díky tomu můžete odhalit, s čím má třída konkrétně potíž. Ke zlepšení Indexu zdravých vztahů můžete jako učitel přispět například skupinovými aktivitami, podporou otevřené komunikace a vytvářením podpůrné atosféry pro žáky.'
+      recommendation: 'Index zdravých vztahů ve třídě je nízký. Zkontrolujte hodnoty všech čtyř ukazatelů, ze kterých se výsledek skládá. To vám jasněji ukáže, na co je potřeba se zaměřit. Obecně můžeme doporučit skupinovou intervenci na podporu kamarádských vztahů a komunikace. Také se hodí rozvíjet u žáků empatii k druhým.'
+    middle:
+      description: 'Hodnota Indexu zdravých vztahů je v této třídě průměrná. To znamená, že se ve třídě daří držet nepřátelské chování na nižší úrovni, kamarádské vztahy jsou rovnoměrně rozloženy, a také většinou opětovány. Je zde ale prostor ke zlepšení – jako učitel můžete zorganizovat team-buildingová cvičení, podporovat empatii a vzdělávat žáky v řešení konfliktů k posílení zdravých vztahů ve třídě.'
+      recommendation: 'Index zdravých vztahů není v optimálních číslech. Zkontrolujte hodnoty všech čtyř ukazatelů, ze kterých se výsledek skládá. To vám jasněji ukáže, na co je potřeba se zaměřit. Také zkuste sledováním třídy zjistit, co by žáci potřebovali, aby se v kolektivu cítili lépe.'
+    high:
+      description: 'Vysoká hodnota Indexu zdravých vztahů ukazuje, že se žákům v této třídě podařilo vytvořit si mezi sebou silný a podpůrný kolektiv, který neinklinuje k nepřátelskému chování. K udržení vysokých hodnot Indexu zdravých vztahů se můžete jako učitel snažit posilovat ve třídě spolupráci, respekt a laskavost.'
+      recommendation: 'Index zdravých vztahů vypadá v pořádku, a třída jako taková je zřejmě v dobré kondici. Věnujte tedy pozornost spíše jednotlivým dětem, které se i přes vysokou hodnotu indexu zdravých vztahů nemusí ve třídě cítit dobře. Zvažte také možnost nabídnout jim individuální terapii se zaměřením na rozvoj sociálních dovedností a sebevědomí.'
+
+trustworthiness_score:
+  title: 'Index důvěryhodnosti zdravých vztahů'
+  description: 'Naměřené indexy nemusí být za každé situace stejně důvěryhodné. Je to kvůli tomu, že se žáků neptáme na prožívání jich samotných (například s kým kamarádí a podobně), ale na to, co pozorují u ostatních. Proto jsme vytvořili také Index důvěryhodnosti, který nám ukazuje, nakolik můžeme výsledku Indexu zdravých vztahů ve třídě věřit. Pokud je nízký, pohledy jednotlivých žáků byly velmi odlišné, a je tak vysoká pravděpodobnost chyby v měření.'
+  teacher:
+    low:
+      description: 'Hodnota indexu zdravých vztahů s největší pravděpodobností není velmi přesná a je potřeba ji brát s rezervou.'
+      recommendation: 'Hodnota Indexu zdravých vztahů nemusí být přesná, berte ji prosím s rezervou. Ne všichni žáci se v odpovědích shodují.'
+    high:
+      description: 'Hodnota indexu zdravých vztahů je s největší pravděpodobností velmi přesná.'
+      recommendation: 'Vypadá to, že se na celkové kondici vztahů ve třídě shoduje většina žáků. Index zdravých vztahů by tak měl svou hodnotou věrně odrážet stav kolektivu.'
+  psychologist:
+    low:
+      description: 'Hodnota indexu zdravých vztahů s největší pravděpodobností není velmi přesná a je potřeba ji brát s rezervou.'
+      recommendation: 'Hodnota Indexu zdravých vztahů nemusí být přesná, ne všichni žáci se v odpovědích shodují. Snažte se zjistit více informací. Mohou v tom pomoci například individuální rozhovory s žáky. Následně zvažte, jestli měření opakovat, případně použít nějakou jinou metodu pro zjištění situace.'
+    high:
+      description: 'Hodnota indexu zdravých vztahů je s největší pravděpodobností velmi přesná.'
+      recommendation: 'Vypadá to, že se na celkové kondici vztahů ve třídě shoduje většina žáků. Index zdravých vztahů by tak měl svou hodnotou věrně odrážet stav kolektivu. Pokud jsou vztahy v třídě zdravé, udržujte pozitivní atmosféru a posilujte spolupráci mezi žáky.'
+
+cohesion:
+  title: 'Propojenost kamarádských vazeb'
+  description:
+  parent:
+    low:
+      description: 'Málo kamarádských vazeb v sociogramu naznačuje, že se ve třídě mezi sebou žáci příliš nekamarádí. Někteří se možná cítí osamělí.'
+      recommendation: 'Pro žáky může být obtížné navázat přátelství. Celkové klima ve třídě se zlepší, pokud spolu bude více dětí kamarádit. Podporujte své dítě ve vytváření nových přátelství a také v účasti na skupinových aktivitách ve škole nebo školních výletech. Můžete také pomoci zorganizovat setkání s ostatními rodiči, kde spolu vymyslíte další kroky ke zlepšení situace. Pomůže i organizace mimoškolní události pro rodiče a děti – vytvoříte tak další příležitost pro navazování kamarádství.'
+    middle:
+      description: 'Sociogram ukazuje běžné rozložení kamarádských vazeb, podobnou situaci vidíme ve většině tříd. Někteří žáci jsou o něco populárnější než jiní.'
+      recommendation: 'V této třídě se žáci mezi sebou kamarádí, někteří ale mohou být stranou. Popovídejte si se svým dítětem o tom, s kým ve třídě kamarádí, a podpořte ho také v tom, aby si vytvořilo vztahy i s dalšími spolužáky. Atmosféře ve třídě můžete také pomoci organizací mimoškolních setkání.'
+    high:
+      description: 'Sociogram ukazuje, že žáci v této třídě si mezi sebou vytvořili hustou a vzájemně propojenou síť kamarádských vztahů. Mnoho z nich se kamarádí s velkým množstvím spolužáků, a díky tomu třídu vnímají jako malou komunitu.'
+      recommendation: 'V této třídě se spolu děti kamarádí. Podporujte dítě v tom, aby pečovalo o svá přátelství, a umožněte časté setkávání se spolužáky.'
+  teacher:
+    low:
+      description: 'Málo kamarádských vazeb v sociogramu naznačuje, že se ve třídě mezi sebou žáci příliš nekamarádí. Někteří se možná cítí osamělí.'
+      recommendation: 'Pro žáky může být obtížné navázat přátelství. Celkové klima ve třídě se zlepší, pokud spolu bude více dětí kamarádit. Organizujte skupinové aktivity podporující vytváření vztahů a všímejte si, pokud bude někdo vyloučený z kolektivu. Těmto žákům můžete nabídnout více příležitostí k navazování kamarádství s ostatními.'
+    middle:
+      description: 'Sociogram ukazuje běžné rozložení kamarádských vazeb, podobnou situaci vidíme ve většině tříd. Někteří žáci jsou o něco populárnější než jiní.'
+      recommendation: 'V této třídě se žáci mezi sebou kamarádí. Pozitivní atmosféru můžete ještě posílit pomocí sdílených úkolů, oceňování příkladných kamarádství, strategického párování dětí do aktivit ve třídě a prací v menších i větších skupinkách.'
+    high:
+      description: 'Sociogram ukazuje, že žáci v této třídě si mezi sebou vytvořili hustou a vzájemně propojenou síť kamarádských vztahů. Mnoho z nich se kamarádí s velkým množstvím spolužáků, a díky tomu třídu vnímají jako malou komunitu.'
+      recommendation: 'V této třídě se spolu děti hodně kamarádí. Udržujte podporující prostředí pomocí aktivit, které posilují různorodé interakce mezi jednotlivými žáky.'
+  psychologist:
+    low:
+      description: 'Málo kamarádských vazeb v sociogramu naznačuje, že se ve třídě mezi sebou žáci příliš nekamarádí. Někteří se možná cítí osamělí.'
+      recommendation: 'Pro žáky může být obtížné navázat přátelství. Celkové klima ve třídě se zlepší, pokud spolu bude více dětí kamarádit. Při intervencích, které povedou žáky k budování kamarádských vazeb, dbejte, aby nikdo nezůstal osamělý.'
+    middle:
+      description: 'Sociogram ukazuje běžné rozložení kamarádských vazeb, podobnou situaci vidíme ve většině tříd. Někteří žáci jsou o něco populárnější než jiní.'
+      recommendation: 'V této třídě se žáci mezi sebou kamarádí, někteří ale mohou být stranou. Doporučujeme se na přátelské vazby zaměřit a pomoci dětem, které mají problém najít kamarády. Můžete spolu posilovat jejich sociálně emoční kompetence, nebo jim poskytnout individuální terapii.'
+    high:
+      description: 'Sociogram ukazuje, že žáci v této třídě si mezi sebou vytvořili hustou a vzájemně propojenou síť kamarádských vztahů. Mnoho z nich se kamarádí s velkým množstvím spolužáků, a díky tomu třídu vnímají jako malou komunitu.'
+      recommendation: 'V této třídě se spolu děti kamarádí. Podporujte tyto pozitivní vazby,  ale také sledujte, zda mají všechny děti prostor vyjádřit svůj vlastní názor, aniž by se musely bát vyloučení z kolektivu.'
+
+core_periphery:
+  title: 'Míra jádrové struktury ve třídě'
+  description: 'Tento ukazatel nám říká, jak moc jsou kamarádské vztahy spojeny s několika málo hlavními žáky ve třídě, a jak moc je zbytek kolektivu oddělený. Když je jádrová struktura 100%, znamená to, že se všichni chtějí kamarádit jen s jedním nejpopulárnějším spolužákem – a to není moc zdravé. Naopak výsledek 0% říká, že buď existuje hodně malých skupinek kamarádů, nebo se všichni žáci přátelí podobně. Pro výpočet Indexu zdravých vztahů hodnotu jádrové struktury obrátíme tak, aby vyšší hodnota znamenala lepší kamarádské vztahy ve třídě.'
+  parent:
+    low:
+      description: 'Sociogram naznačuje, že ve třídě je jeden nebo několik velmi populárních žáků, okolo kterých se tvoří menší skupiny následovníků. Zbytek třídy je spíše na okraji s minimem kamarádských vazeb.'
+      recommendation: 'Ve třídě je několik žáků oblíbenějších než ostatní. Zkuste si o tom s vaším dítětem popovídat a zjistit, jak moc je v kolektivu oblíbené. Pokud stojí ve středu kolektivu, podpořte ho, aby pomohlo najít kamarády i méně populárním spolužákům. Pokud je spíše na okraji, dodejte mu odvahu, aby se skamarádilo s ostatními spolužáky, kteří na tom třeba jsou podobně. Mohou společně vytvořit vlastní skupinku.'
+    high:
+      description: 'Sociogram naznačuje, že žáci ve třídě se mezi sebou příliš neliší v tom, kolik vztahů s ostatními spolužáky mají. Vztahy jsou více rovnoměrně rozložené a příliš se netvoří jádro a okraj kolektivu.'
+      recommendation: 'Ve třídě je oblíbenost celkem rovnoměrně rozložena mezi žáky. Podpořte své dítě v respektování odlišností v kolektivu a aktivnímu propojování s různými dalšími skupinkami ve třídě.'
+  teacher:
+    low:
+      description: 'Sociogram naznačuje, že ve třídě je jeden nebo několik velmi populárních žáků, okolo kterých se tvoří menší skupiny následovníků. Zbytek třídy je spíše na okraji s minimem kamarádských vazeb'
+      recommendation: 'Několik dětí ve třídě je oblíbenějších než ostatní. Podporujte vytváření nových přátelství také mezi ostatními žáky. Zkuste trochu narušit sociální hierarchii a iniciujte interakce mezi dětmi napřič žebříčkem oblíbenosti. Zároveň veďte méně oblíbené žáky, aby nespoléhali jen na přiblížení se k těm nejpopulárnějším, ale kamarádili se také mezi sebou.'
+    high:
+      description: 'Sociogram naznačuje, že žáci ve třídě se mezi sebou příliš neliší v tom, kolik vztahů s ostatními spolužáky mají. Vztahy jsou více rovnoměrně rozložené a příliš se netvoří jádro a okraj kolektivu.'
+      recommendation: 'Oblíbenost je v této třídě rovnoměrně rozložená mezi děti. Zaměřte se na to, jestli žáci nevytváří uzavřené skupinky, které mezi sebou nekomunikují. Vytvářejte prostředí, kde je kolektivní spolupráce oceňovaná více než individuální úspěchy.'
+  psychologist:
+    low:
+      description: 'Sociogram naznačuje, že ve třídě je jeden nebo několik velmi populárních žáků, okolo kterých se tvoří menší skupiny následovníků. Zbytek třídy je spíše na okraji s minimem kamarádských vazeb.'
+      recommendation: 'Ve třídě je několik žáků oblíbenějších než ostatní. Zkuste děti na okraji kolektivu, podpořit, aby se kamarádily také mezi sebou navzájem, a neusilovaly pouze o přátelství s nejoblíbenějšími spolužáky.'
+    high:
+      description: 'Sociogram naznačuje, že žáci ve třídě se mezi sebou příliš neliší v tom, kolik vztahů s ostatními spolužáky mají. Vztahy jsou více rovnoměrně rozložené a příliš se netvoří jádro a okraj kolektivu.'
+      recommendation: 'Ve třídě je oblíbenost celkem rovnoměrně rozložena mezi žáky. Sledujte, jestli se nevytváří uzavřené skupinky, které mezi sebou nekomunikují.'
+
+overall_reciprocity:
+  title: 'Vzájemnost kamarádských vazeb'
+  description: 'Tento ukazatel nám říká, jak moc jsou ve třídě přátelství vzájemná. Pokud je výsledek 0 %, znamená to, že bez ohledu na to, kolik vztahů ve třídě vzniklo, všechny jsou jednostranné. Naopak maximální hodnota říká, že úplně všechny kamarádské vazby jsou vzájemné. Ve zdravé třídě by měla být opětovaná většina kamarádství.'
+  parent:
+    low:
+      description: 'Sociogram naznačuje, že poměrně velké množství žáků ve třídě vnímá kamarádství se spolužáky, kteří jim to ale neopětují.'
+      recommendation: 'Některé děti ve třídě možná zažívají neopětovaná přátelství. Zkuste si o tom s vaším dítětem popovídat a zjistit, jestli se to děje i jemu. Pokud ano, podpořte ho, aby zkusilo se svými kamarády komunikovat a vztahy si vyjasnit, případně si najít jiné upřímnější přátele. Můžete spolu také rozvíjet asertivitu. '
+    middle:
+      description: 'Sociogram naznačuje typickou situaci ve třídě. Většina kamarádství ve třídě je opětovaná. Některá kamarádství jsou však neopětovaná.'
+      recommendation: 'Vztahy ve třídě jsou často vzájemné. Je ale možné, že některé děti stojí trochu stranou. Zkuste si o tom s vaším dítětem popovídat a popořit ho v rozvíjení komunikačních dovedností.'
+    high:
+      description: 'Sociogram naznačuje, že ve třídě velká většina žáků má opětované kamarádské vztahy.'
+      recommendation: 'Vztahy ve třídě jsou téměř všechny vzájemné. Můžete si s dítětem popovídat o tom, jak to má ve třídě s kamarády, a ocenit, že se mu povedlo vybudovat si dobrá přátelství.'
+  teacher:
+    low:
+      description: 'Sociogram naznačuje, že poměrně velké množství žáků ve třídě vnímá kamarádství se spolužáky, kteří jim to ale neopětují.'
+      recommendation: 'Některé děti možná zažívají neopětovaná přátelství. Možná spolu žáci komunikují málo nebo nevhodným způsobem. Pomozte dětem s neopětovaným přátelstvím rozvíjet komunikační schopnosti a asertivitu a podpořte je v navazování dalších vztahů. S žáky, kteří kamarádství neopětují, můžete pracovat na rozvoji empatie.'
+    middle:
+      description: 'Sociogram naznačuje typickou situaci ve třídě. Většina kamarádství ve třídě je opětovaná. Některá kamarádství jsou však neopětovaná.'
+      recommendation: 'Vztahy ve třídě jsou z větší části vzájemné. Podpora komunikačních dovedností a rozvoj schopností potřebných k udržování vztahů to může ještě vylepšit.'
+    high:
+      description: 'Sociogram naznačuje, že ve třídě velká většina žáků má opětované kamarádské vztahy.'
+      recommendation: 'Vztahy ve třídě jsou téměř všechny vzájemné. Sledujte situaci a podporujte děti v tom, aby si kamarádství udržely – například tak, že oceníte opětované pozitivní nebo vzájemně respektující chování, kterého si všimnete.'
+  psychologist:
+    low:
+      description: 'Sociogram naznačuje, že poměrně velké množství žáků ve třídě vnímá kamarádství se spolužáky, kteří jim to ale neopětují.'
+      recommendation: 'Některé děti možná zažívají neopětovaná přátelství. Větší podpora či pomoc psychologa by mohla pomoci. Tím, že budete situaci řešit již v zárodku, do budoucna můžete předejít konfliktům a křivdám. Neopětovaná přátelství mohou naznačovat, že spolužáci mohou některé žáky emočně či jinak zneužívat.'
+    middle:
+      description: 'Sociogram naznačuje typickou situaci ve třídě. Většina kamarádství ve třídě je opětovaná. Některá kamarádství jsou však neopětovaná.'
+      recommendation: 'Vztahy ve třídě jsou z větší části vzájemné. Podpora komunikačních dovedností a rozvoj schopností potřebných k udržování vztahů to může ještě vylepšit.'
+    high:
+      description: 'Sociogram naznačuje, že ve třídě velká většina žáků má opětované kamarádské vztahy.'
+      recommendation: 'Vztahy ve třídě jsou téměř všechny vzájemné. Sledujte situaci a podporujte děti v tom, aby si kamarádství udržely.'
+
+aggression:
+  title: 'Propojenost nepřátelských vazeb'
+  description: 'Říká nám, jak moc se žáci zapojují do nepřátelského chování. Nulová propojenost tady znamená, že žádný žák se nechová vůči nikomu jinému nepřátelsky. Naopak při výsledku 100 % jsou do nepřátelského chování či šikany zapojeny všechny děti ve třídě – jako agresoři nebo oběti. ve zdravé třídě takové chování děti netolerují. Čím více žáků je tedy do nepřátelského chování zapojeno, tím horší vztahy ve třídě panují. Pro výpočet Indexu zdravých vztahů hodnotu propojenosti nepřátelských vazeb obrátíme tak, aby vyšší hodnota znamenala zdravější vztahy ve třídě.'
+  parent:
+    low:
+      description: 'V této třídě jsme neodhalili žádné nepřátelské chování.'
+      recommendation: 'Nikdo z žáků nenahlásil nepřátelské vazby. Můžete přesto vaše dítě učit komunikovat o svých pocitech a konstruktivně řešit případné problémy.'
+    mid_low:
+      description: 'Někteří žáci jsou ve třídě možná obětí nepřátelského chování. Celkově jsme ale neodhalili příliš problémových vazeb. To znamená, že třída je pro většinu žáků bezpečným místem.'
+      recommendation: 'Ve třídě je hrstka žáků, kteří jsou pravděpodobně terčem nepřátelského chování. Popovídejte si se svým dítětem a zjistěte, jestli se mu něco podobného ve třídě stalo. Pokud ano, určitě jej podpořte v konstruktivním řešení problémů, ale také se spojte s třídním učitelem či školním psychologem, kteří vám pomohou situaci vyřešit. Pro konflikty mezi dětmi je potřeba, aby se všichni dospělí spojili – pokud nebudou zajedno, mohou se tyto situace zhoršovat.'
+    mid_high:
+      description: 'V této třídě děti poukazují na větší množství vazeb nepřátelského chování. Někteří žáci mohou být obětí šikany.'
+      recommendation: 'Ve třídě jsou pravděpodobně konkrétní případy nepřátelského chování. Je potřeba zasáhnout. Popovídejte si se svým dítětem a zjistěte, jestli se mu něco podobného ve třídě stalo. Pokud ano, určitě jej podpořte v konstruktivním řešení problémů, ale také se spojte s třídním učitelem či školním psychologem, kteří vám pomohou situaci vyřešit. Pro konflikty mezi dětmi je potřeba, aby se všichni dospělí spojili – pokud nebudou zajedno, mohou se tyto situace zhoršovat.'
+    high:
+      description: 'V této třídě děti pozorují velmi časté nepřátelské chování. Žáci často řeší konflikty agresivním či nepřátelským způsobem. Velký výskyt takových vazeb může ale odvést pozornost od skutečné šikany.'
+      recommendation: 'Ve třídě je potřeba intenzivně pracovat na prevenci nepřátelského chování. Popovídejte si se svým dítětem a zjistěte, jestli se mu něco podobného ve třídě stalo. Pokud ano, určitě jej podpořte v konstruktivním řešení problémů, ale také se spojte s třídním učitelem či školním psychologem, kteří vám pomohou situaci vyřešit. Pro konflikty mezi dětmi je potřeba, aby se všichni dospělí spojili – pokud nebudou zajedno, mohou se tyto situace zhoršovat.'
+  teacher:
+    low:
+      description: 'V této třídě jsme neodhalili žádné nepřátelské chování.'
+      recommendation: 'Nikdo z žáků nenahlásil nepřátelské vazby. Je možné, že se děti pouze obávali o tomto tématu mluvit. Zaměřte se na vztahy ve třídě a podpořte děti, aby se naučily zdravě vyjadřovat své emoce.'
+    mid_low:
+      description: 'Někteří žáci jsou ve třídě možná obětí nepřátelského chování. Celkově jsme ale neodhalili příliš problémových vazeb. To znamená, že třída je pro většinu žáků bezpečným místem. '
+      recommendation: 'Ve třídě je hrstka žáků, kteří jsou pravděpodobně terčem nepřátelského chování. Zaměřte se na vytváření bezpečného prostředí a aktivně řešte i náznaky možných konfliktů.'
+    mid_high:
+      description: 'V této třídě děti poukazují na větší množství vazeb nepřátelského chování. Někteří žáci mohou být obětí šikany.'
+      recommendation: 'Ve třídě jsou pravděpodobně konkrétní případy nepřátelského chování. Je potřeba zasáhnout. Pokud nemáte k dispozici školního psychologa a škola si extrení pomoc nemůže dovolit, pokuste se sami s žáky aktivně řešit konflikty. Pomůže také najít pro oběti ve třídě spojence a obránce.'
+    high:
+      description: 'V této třídě děti pozorují velmi časté nepřátelské chování. Žáci často řeší konflikty agresivním či nepřátelským způsobem. Velký výskyt takových vazeb může ale odvést pozornost od skutečné šikany.'
+      recommendation: 'V této třídě je potřeba intenzivně pracovat na prevenci nepřátelského chování. Poskytněte žákům v obtížných situacích podporu. Obraťte se na odborníky.'
+  psychologist:
+    low:
+      description: 'V této třídě jsme neodhalili žádné nepřátelské chování.'
+      recommendation: 'Nikdo z žáků nenahlásil nepřátelské vazby. Je možné, že se děti pouze obávali o tomto tématu mluvit. Zaměřte se na vztahy ve třídě a podpořte děti, aby se naučily zdravě vyjadřovat své emoce.'
+    mid_low:
+      description: 'Někteří žáci jsou ve třídě možná obětí nepřátelského chování. Celkově jsme ale neodhalili příliš problémových vazeb. To znamená, že třída je pro většinu žáků bezpečným místem. '
+      recommendation: 'Ve třídě je hrstka žáků, kteří jsou pravděpodobně terčem nepřátelského chování. Poskytněte jim podporu a najděte pro ně ve třídě spojence a obránce.'
+    mid_high:
+      description: 'V této třídě děti poukazují na větší množství vazeb nepřátelského chování. Někteří žáci mohou být obětí šikany.'
+      recommendation: 'Ve třídě jsou pravděpodobně konkrétní případy nepřátelského chování. Je potřeba zasáhnout – obětem poskytněte individuální podporu a najděte pro ně ve třídě spojence a obránce.'
+    high:
+      description: 'V této třídě děti pozorují velmi časté nepřátelské chování. Žáci často řeší konflikty agresivním či nepřátelským způsobem. Velký výskyt takových vazeb může ale odvést pozornost od skutečné šikany.'
+      recommendation: 'V této třídě je potřeba intenzivně pracovat na prevenci nepřátelského chování. Poskytněte žákům v obtížných situacích podporu. Pomoci může také nastavení školních norem jasně proti nepřátelskému chování mezi spolužáky.'
+
+classroom_victims:
+  title: 'Počet obětí ve třídě'
+  description: 'V této třídě žáci identifikovali {count, plural, =0 {0 spolužáků} =1 {1 spolužáka} =2 {2 spolužáky} =3 {3 spolužáky} =4 {4 spolužáky} other {# spolužáků}} kteří se jsou pravděpodobně často terčem agresivního chování.'
+
+classroom_bullies:
+  title: 'Počet agresorů ve třídě'
+  description: 'V této třídě žáci identifikovali {count, plural, =0 {0 spolužáků} =1 {1 spolužáka} =2 {2 spolužáky} =3 {3 spolužáky} =4 {4 spolužáky} other {# spolužáků}}, kteří se pravděpodobně opakovaně dopouští agresivního chování.'
+
+classroom_defenders:
+  title: 'Počet obránců ve třídě'
+  description: 'V této třídě žáci identifikovali {count, plural, =0 {0 spolužáků} =1 {1 spolužáka} =2 {2 spolužáky} =3 {3 spolužáky} =4 {4 spolužáky} other {# spolužáků}}, kteří pravděpodobně často brání ostatní spolužáky před agresivním chováním.'
+
+classroom_bully_victims:
+  title: 'Počet agresivních obětí ve třídě'
+  description: 'V této třídě žáci identifikovali {count, plural, =0 {0 spolužáků} =1 {1 spolužáka} =2 {2 spolužáky} =3 {3 spolužáky} =4 {4 spolužáky} other {# spolužáků}}, kteří mohou být v komplikované pozici, kdy se sami dopouští agresivního chování, ale také jsou terčem agrese někoho jiného'
+
+bully_core_periphery:
+  title: 'Ukazatel rozložení šikany'
+  level1:
+    description: 'Pozor, graf nepřátelského chování ukazuje, že větší počet žáků ubližuje jen jednomu nebo hrstce svých spolužáků. Ti mohou být ve třídě jediným terčem a oběťmi šikany, ze které nemají příliš možností se vymanit. Je to závažná situace – je třeba neprodleně zakročit a zamezit takovému chování mezi dětmi v budoucnu.'
+    recommendation: 'Větší počet agresorů napadá pravděpodobně pouze hrstku obětí. Ty jsou ve velmi složité situaci, nedokážou se samy bránit, a je třeba jim pomoci. Zastavte nepřátelské chování a najděte obětem v kolektivu obránce. S celou třídou potom můžete pracovat na změně vzorců destruktivního chování pomocí skupinové terapie. Zařadit můžete i preventivní programy posilující empatii, komunikaci a pozitivní klima. V prevenci šikany může pomoci také třídní učitel.'
+  level2:
+    description: 'Pozor, graf nepřátelského chování ukazuje, že hlavním zdrojem takového chování ve třídě je jeden nebo hrstka žáků, kteří mohou šikanovat ostatní. Může se jednat o závažnou situaci a je potřeba ji řešit pro zabránění šikaně v budoucnu.'
+    recommendation: 'Ve třídě je pravděpodobně jen málo agresorů, kteří ale napadají větší počet spolužáků. S agresory je možné pracovat například pomocí individuální terapie. Také zkuste zařadit preventivní programy posilující empatii, komunikaci, pozitivní klima a asertivitu u všech žáků. V prevenci šikany může pomoci také třídní učitel.'
+  level3:
+    description: 'Pozor, graf nepřátelského chování ukazuje, že tyto projevy jsou ve třídě rozptýleny mezi více dětí. Více žáků projevuje agresi a pravděpodobně si každý z nich vybral svoji oběť.'
+    recommendation: 'Nevypadá to, že nepřátelské chování ve třídě má na svědomí pouze hrsta žáků. Naštěstí také není příliš časté. Pro zlepšení doporučujeme vyzkoušet některý z preventivních programů.'
+  level4:
+    description: 'Pozor, graf nepřátelského chování ukazuje, že tyto projevy jsou ve třídě rozptýleny – více žáků pravděpodobně šikanuje více obětí. Může se jednat o závažnou situaci, která ukazuje na nezdravé prostředí ve třídě. Vypadá to ale, že žádný žák není šikanovaný výrazně více než ostatní. Jako učitel můžete zkusit nějaký z plošných intervenčních programů, který cílí na snížení míry nepřátelského chování.'
+    recommendation: 'Nevypadá to, že nepřátelské chování ve třídě má na svědomí pouze hrsta žáků. Bohužel je ale poměrně časté, což ukazuje na obecně více nepřátelské prostředí. Na toto preventivní programy nemusí stačit, je potřeba zasáhnout. Zaměřte se také na třídní normy a jejich posun směrem ke zdravějšímu a přátelštějšímu chování mezi spolužáky.'
+  level5:
+    description: 'V této třídě jsme neodhalili žádné nepřátelské chování. Dobrá práce!'
+    recommendation: 'Pokud žáci nereportovali žádné vazby nepřátelského chování, pokračujte v udržování pozitivní třídní atmosféry a podporujte sociální a emoční kompetence žáků.'
+  level6:
+    description: 'V této třídě je stejný počet agresorů jako obětí šikany.'
+    recommendation: 'Ve třídě je pravděpodobně stejný počet agresorů jako obětí nepřátelského chování. Zaměřte se na žáky, kterých se to týká, a zkuste s nimi konflikt vyřešit již v zárodku. Tím předejdete vzniku šikany v kolektivu.'
+
+bullying_reciprocation:
+  title: 'Ukazatel opětovanosti nepřátelského chování'
+  description: 'Nepřátelské vazby, kdy vidíme šipku v obou směrech, ukazují konflikt mezi žáky, kteří oba řeší nepřátelským chováním. Pravděpodobně se ale nejedná o šikanu, která je založena hlavně na nerovnováze sil. V tomto případě to vypadá, že oba žáci se brání a rány nebo naschvály si vrací.'
+  teacher:
+    low:
+      description: 'V této třídě jsou nepřátelské vazby spíše jednosměrné. To může být závažná situace.'
+      recommendation: 'Většina nepřátelských vazeb není opětovaných. Oběti konfliktu se možná neumí samy bránit. Kontaktujte školního psychologa.'
+    middle:
+      description: 'V této třídě jsou nepřátelské vazby poměrně opětované. Oběti nepřátelství jej často vracejí zpět útočníkovi nebo se na tvorbě takové vazby přímo podílejí.'
+      recommendation: 'Nepřátelské vazby jsou ve třídě relativně opětované, ovšem ne všechny. Snažte se u všech žáků rozvíjet klíčové sociálně-emoční kompetence, jako je například empatie, řešení konfliktů konstruktivní cestou apod. Ohledně nepřátelského chování, které opětováno není, doporučujeme kontaktovat školního psychologa.'
+    high:
+      description: 'V této třídě jsou nepřátelské vazby většinou opětované. Oběti nepřátelství jej často vracejí zpět útočníkovi nebo se na tvorbě takové vazby přímo podílejí. '
+      recommendation: 'Většina nepřátelských vazeb mezi dětmi je opětována. Vypadá to, že je ve třídě rovnocenný poměr sil. Sledujte množství konfliktů a podpořte děti v konstruktivním řešení.'
+  psychologist:
+    low:
+      description: 'V této třídě jsou nepřátelské vazby spíše jednosměrné. To může být závažná situace.'
+      recommendation: 'Většina nepřátelských vazeb není opětovaných. Oběti konfliktu se možná neumí samy bránit. Nepřátelské chování je zapotřebí co nejdříve zastavit. Potom pro oběti najděte ve třídě vhodné spojence a obránce. Pomoci může také jeden z programů proti agresi.'
+    middle:
+      description: 'V této třídě jsou nepřátelské vazby poměrně opětované. Oběti nepřátelství jej často vracejí zpět útočníkovi nebo se na tvorbě takové vazby přímo podílejí.'
+      recommendation: 'Nepřátelské vazby jsou ve třídě relativně opětované. Zaměřte se především na konflikty, které opětovány nejsou a zasáhněte proti pokračování agrese. V rámci třídy se snažte u všech žáků rozvíjet klíčové sociálně-emoční kompetence, jako je například empatie, řešení konfliktů konstruktivní cestou apod.'
+    high:
+      description: 'V této třídě jsou nepřátelské vazby většinou opětované. Oběti nepřátelství jej často vracejí zpět útočníkovi nebo se na tvorbě takové vazby přímo podílejí.'
+      recommendation: 'Většina nepřátelských vazeb mezi dětmi je opětována. Vypadá to, že je ve třídě rovnocenný poměr sil. Sledujte množství konfliktů a podpořte děti v konstruktivním řešení.'
+
+victim_defending:
+  title: 'Ukazatel bráněnosti obětí'
+  description: ''
+  teacher:
+    level1:
+      description: 'V této třídě děti neregistrují příliš obranného nebo utěšujícího chování. Není to ale špatný signál. Tím, že nepozorují ani šikanu, není obrana nebo utěšování zkrátka tolik potřeba.'
+      recommendation: 'Děti v této třídě se k sobě obecně nechovají příliš nepřátelsky, není tedy většinou potřeba nikoho bránit. I tak je ale důležité žákům připomenout, na koho se obrátit, kdyby se situace změnila.'
+    level2:
+      description: 'V této třídě děti neregistrují příliš obranného nebo utěšujícího chování. Zároveň si ale všímají častého nepřátelství, a proto může být nedostatek obranného chování varovným signálem. Žáci se nedokáží nebo nechtějí navzájem podpořit v situacích, kdy je někdo napaden jiným spolužákem.'
+      recommendation: 'Oběti nepřátelského chování pravděpodobně ve třídě nikdo nebrání. Zkuste mezi dosud jen přihlížejícími spolužáky najít obránce konkrétních obětí. Také se snažte posunout třídní normy tak, aby nepřátelské chování děti vnímaly negativně. Správná by měla být naopak pomoc, bránění druhých či utěšování. Kontaktujte školního psychologa.'
+    level3:
+      description: 'V této třídě někteří žáci brání druhé proti nepřátelství spolužáků. Abyste jako učitel podpořili toto chování, podporujte ve třídě empatii a pozitivní vztahy mezi dětmi. Může to pomoci zvýšit pocit sounáležitosti se školou. Sledujte ale pozorně, kdo koho brání. Pokud se děti podporují pouze v rámci svých skupin, může to umocnit skupinový boj ve třídě. Je také možné, že agresor si svoji oběť brání vůči nepřátelskému chování jiného žáka. Takové obranné chování ukazuje spíše na nezdravou dynamiku vztahů.'
+      recommendation: 'V této třídě někteří spolužáci oběti nepřátelského chování brání. Podpořte a oceňte tyto žáky – obránci se bez podpory časem sami mohou stát oběťmi.'
+    level4:
+      description: 'V této třídě si žáci všímají častého obranného nebo utěšujícího chování v situacích, kdy je někdo napaden jiným spolužákem. Zdá se, že je podpůrná síť ve třídě vybudovaná dobře. Díky tomu děti mohou lépe zvládat případné nepřátelské chování.'
+      recommendation: ''
+    level5:
+      description: 'V této třídě si žáci všímají obranného nebo utěšujícího chování. Bohužel, bráněni jsou často žáci jiní žáci, než ti, kteří by to nejvíc potřebovali (takoví, kteří by se dali např. označit jako časté oběti agresivního chování).'
+      recommendation: 'Je možné, že v této třídě děti nebrání oběti nepřátelského chování, ale jiné spolužáky. Kontaktujte školního psychologa.'
+  psychologist:
+    level1:
+      description: 'V této třídě děti neregistrují příliš obranného nebo utěšujícího chování. Není to ale špatný signál. Tím, že nepozorují ani šikanu, není obrana nebo utěšování zkrátka tolik potřeba.'
+      recommendation: 'Děti v této třídě se k sobě obecně nechovají příliš nepřátelsky, není tedy většinou potřeba nikoho bránit. I tak je ale důležité žákům připomenout, na koho se obrátit, kdyby se situace změnila.'
+    level2:
+      description: 'V této třídě děti neregistrují příliš obranného nebo utěšujícího chování. Zároveň si ale všímají častého nepřátelství, a proto může být nedostatek obranného chování varovným signálem. Žáci se nedokáží nebo nechtějí navzájem podpořit v situacích, kdy je někdo napaden jiným spolužákem.'
+      recommendation: 'Oběti nepřátelského chování pravděpodobně ve třídě nikdo nebrání. Zkuste mezi dosud jen přihlížejícími spolužáky najít obránce konkrétních obětí. Také se snažte posunout třídní normy tak, aby nepřátelské chování děti vnímaly negativně. Správná by měla být naopak pomoc, bránění druhých či utěšování.'
+    level3:
+      description: 'V této třídě někteří žáci brání druhé proti nepřátelství spolužáků. Abyste jako učitel podpořili toto chování, podporujte ve třídě empatii a pozitivní vztahy mezi dětmi. Může to pomoci zvýšit pocit sounáležitosti se školou. Sledujte ale pozorně, kdo koho brání. Pokud se děti podporují pouze v rámci svých skupin, může to umocnit skupinový boj ve třídě. Je také možné, že agresor si svoji oběť brání vůči nepřátelskému chování jiného žáka. Takové obranné chování ukazuje spíše na nezdravou dynamiku vztahů.'
+      recommendation: 'V této třídě někteří spolužáci oběti nepřátelského chování brání. Podpořte a oceňte tyto žáky – obránci se bez podpory časem sami mohou stát oběťmi. '
+    level4:
+      description: 'V této třídě si žáci všímají častého obranného nebo utěšujícího chování v situacích, kdy je někdo napaden jiným spolužákem. Zdá se, že je podpůrná síť ve třídě vybudovaná dobře. Díky tomu děti mohou lépe zvládat případné nepřátelské chování. '
+      recommendation: ''
+    level5:
+      description: 'V této třídě si žáci všímají obranného nebo utěšujícího chování. Bohužel, bráněni jsou často žáci jiní žáci, než ti, kteří by to nejvíc potřebovali (takoví, kteří by se dali např. označit jako časté oběti agresivního chování).'
+      recommendation: 'Je možné, že děti v této třídě nebrání oběti nepřátelského chování, ale jiné spolužáky. Zaměřte se na jejich motivaci a také na to, jestli takové obranné chování není v důsledku nepřátelské. Program na rozvoj empatie může situaci pomoci zlepšit.'
+
+influence:
+  title: 'Míra vlivu ve třídě'
+  description: 'Index míry vlivu žáka ve třídě ukazuje jeho potenciál ovlivňovat dynamiku kolektivu, a také jak je populární mezi spolužáky. Zohledňuje také do kolika skupin dítě patří, jak se mu daří propojovat spolužáky mezi sebou, a zkrátka jak moc je v centru dění. Index počítáme pomocí hodnocení tří různých ukazatelů. Pokud bude mít jeden z nich nízkou hodnotu, zhorší se i celkový výsledek Indexu míry vlivu. '
+  teacher:
+    low:
+      description: 'Tento žák má relativně nízký Index vlivu. Pravděpodobně tedy nemá příliš možností ovlivňovat dění ve třídě. Jako učitel ho můžete podpořit v získávání zdravého sebevědomí a komunikačních dovedností. To mu pomůže aktivně se zapojit do dění v kolektivu. Je ale třeba myslet také na to, že ne každý žák chce být v centru dění. Je možné, že mu současná situace vyhovuje.'
+      recommendation: 'Žák má pravděpodobně ve třídě jen malý vliv. Zapojujte žáka do třídních aktivit tak, aby se cítil součástí kolektivu. Můžete mu zkoušet dávat důležité funkce nebo role.'
+    middle:
+      description: 'Tento žák má průměrný index vlivu. Pravděpodobně má tedy nějaké možnosti, jak ovlivňovat dění ve třídě, a zároveň je jeho součástí.'
+      recommendation: 'Žák má ve třídě určitý vliv. Podporujte u něj rozvoj komunikačních dovedností a zapojujte ho do skupinových aktivit.'
+    high:
+      description: 'Tento žák má velký potenciál vlivu ve třídě. Může jej využít pro dobré záměry a přispět tak k blahu celého kolektivu. Pokud jej ale využívá pouze k prosazování vlastních zájmů nebo manipuluje s druhými, může to negativně ovlivnit atmosféru mezi dětmi. Jako učitel dbejte na budování vzájemného respektu. Můžete zkusit propojit i ostatní žáky například pomocí skupinových aktivit.'
+      recommendation: 'Žák má pravděpodobně ve třídě velký vliv. Při skupinových aktivitách ho zkuste postavit do jiné než vedoucí role, aby příležitost dostal také někdo jiný. Sledujte, jestli využívá svůj vliv vhodným způsobem k pomoci celé třídě.'
+  psychologist:
+    low:
+      description: 'Tento žák má relativně nízký Index vlivu. Pravděpodobně tedy nemá příliš možností ovlivňovat dění ve třídě. Jako učitel ho můžete podpořit v získávání zdravého sebevědomí a komunikačních dovedností. To mu pomůže aktivně se zapojit do dění v kolektivu. Je ale třeba myslet také na to, že ne každý žák chce být v centru dění. Je možné, že mu současná situace vyhovuje.'
+      recommendation: 'Žák má ve třídě zřejmě jen malý vliv. Při individuálních konzultacích se soustřeďte hlavně na rozvoj komunikačních dovedností a podporu sebevědomí.'
+    middle:
+      description: 'Tento žák má průměrný index vlivu. Pravděpodobně má tedy nějaké možnosti, jak ovlivňovat dění ve třídě, a zároveň je jeho součástí. '
+      recommendation: 'Žák má ve třídě určitý vliv.  Při individuálních konzultacích se soustřeďte na rozvoj empatie. Podpořte žáka, aby svého vlivu využíval pro prospěch celé třídy, a naopak ne nevhodným způsobem.'
+    high:
+      description: 'Tento žák má velký potenciál vlivu ve třídě. Může jej využít pro dobré záměry a přispět tak k blahu celého kolektivu. Pokud jej ale využívá pouze k prosazování vlastních zájmů nebo manipuluje s druhými, může to negativně ovlivnit atmosféru mezi dětmi. Jako učitel dbejte na budování vzájemného respektu. Můžete zkusit propojit i ostatní žáky například pomocí skupinových aktivit. '
+      recommendation: 'Žák má pravděpodobně ve třídě velký vliv. Při individuálních konzultacích se soustřeďte na rozvoj empatie. Podpořte žáka, aby svého vlivu využíval pro prospěch celé třídy, a naopak ne nevhodným způsobem.'
+
+popularity:
+  title: 'Popularita žáka'
+  description: 'Ukazuje nám, jak je žák populární na základě počtu kamarádských vazeb s ostatními dětmi. Nulová popularita by znamenala, že se ve třídě s nikým nepřátelí, maximální naopak říká, že je kamarád se všemi. Obvykle bývá počet přátelství, a tedy míra popularity provázána s vlivem žáka ve třídě. '
+
+nr_groups_classroom_notnormalized:
+  title: 'Příslušnost do vícero skupin ve třídě'
+  description: 'Říká nám, do kolika skupin dítě patří. Pokud je tento ukazatel na nule, může to znamenat, že se mu nepodařilo stát se členem žádné skupiny. Nemusí to souviset s jeho popularitou, ale může to znamenat nižší míru vlivu ve třídě. Pokud žák naopak patří do všech skupin, je možné, že má ve třídě velký vliv.'
+
+betweenness:
+  title: 'Styčný bod'
+  description: 'Tady vidíme, jak moc dítě propojuje ostatní spolužáky, včetně těch, kteří se spolu nekamarádí. Žák, který propojuje různé skupiny, třeba i nesourodé, má pravděpodobně ve třídě vliv, může napomáhat proudění informací a ovlivňovat skupinovou dynamiku. Pokud se žákovi nedaří propojovat děti mezi sebou, není jeho vliv pravděpodobně vysoký. '
+
+leadership:
+  title: 'Je žák lídrem ve skupině?'
+  description: 'Ukazatel nám říká, jak moc žáka ostatní děti vnímají jako vedoucího některé z třídních skupin. Je to ale vždy potřebné dávat do kontextu se skupinou, kam dítě patří. Sledujte také informaci, jak je vůdcovství ve skupině rozložené mezi žáky, a jestli v ní nemá moc jen jedno či několik málo dětí.'
+  teacher:
+    level1:
+      description: 'Tento žák má relativně nízkou míru vůdcovství. Ostatní jej nevnímají jako někoho, kdo má ve skupině hlavní slovo. Zároveň ale žák patří do skupiny, kde jsou si děti většinou poměrně rovny. Žáci se tedy v této skupině mohou obracet spíše na sebe navzájem a ne pouze na vedoucího člena, který by vše řešil. Možná ale bez jasného leadera skupinu nikdo netáhne dopředu.'
+      recommendation: 'Žák patří do skupiny, kde je vůdcovství rozloženo rovnoměrně. Tato skupina ve třídě ale nemá velký vliv. Přistupujte k rozvoji vůdcovských dovedností opatrně a s důrazem na rovnoměrné rozdělení úloh ve skupině.'
+    level2:
+      description: 'Tento žák má vysokou míru vůdcovství. Ve skupině, kam patří, jsou si ale děti poměrně rovny, takže i ostatní její členové jsou vnímáni jako leadeři.'
+      recommendation: 'Žák patří do skupiny, kde je vůdcovství rozloženo rovnoměrně. Tato skupina je zároveň ve třídě zřejmě dost vlivná. Podporujte týmovou práci a motivujte všechny členy skupiny k aktivnímu přispívání.'
+    level3:
+      description: 'Tento žák má relativně nízkou míru vůdcovství. Ve skupině, kam patří, mají vůdcovskou roli spíše jiní žáci.'
+      recommendation: 'Žák patří do skupiny, kde je vůdcovství rozloženo nerovnoměrně. Vypadá to, že právě on je jedním z leaderů. Podporujte u něj empatii a motivujte ho, aby část rozhodování přenechal spolužákům. Cílem je, aby byla ve skupině moc rozložena rovnoměrněji.'
+    level4:
+      description: 'Tento žák má relativně vysokou míru vůdcovství. Pravděpodobně je vedoucím ve své skupině, nebo dokonce v několika skupinách najednou. Ostatní členy jeho skupiny třída natolik vůdcovsky nevnímá.'
+      recommendation: 'Žák patří do skupiny, kde je vůdcovství rozloženo nerovnoměrně. Vypadá to, že právě on je jedním z leaderů. Podporujte u něj empatii a motivujte ho, aby část rozhodování přenechal spolužákům. Cílem je, aby byla ve skupině moc rozložena rovnoměrněji.'
+  psychologist:
+    level1:
+      description: 'Tento žák má relativně nízkou míru vůdcovství. Ostatní jej nevnímají jako někoho, kdo má ve skupině hlavní slovo. Zároveň ale žák patří do skupiny, kde jsou si děti většinou poměrně rovny. Žáci se tedy v této skupině mohou obracet spíše na sebe navzájem a ne pouze na vedoucího člena, který by vše řešil. Možná ale bez jasného leadera skupinu nikdo netáhne dopředu.'
+      recommendation: 'Žák patří do skupiny, kde je vůdcovství rozloženo rovnoměrně. Tato skupina ve třídě ale nemá velký vliv. Může pomoci u všech členů skupiny rozvíjet sociální kompetence a nechat je vyzkoušet si vedoucí pozici.'
+    level2:
+      description: 'Tento žák má vysokou míru vůdcovství. Ve skupině, kam patří, jsou si ale děti poměrně rovny, takže i ostatní její členové jsou vnímáni jako leadeři. '
+      recommendation: 'Žák patří do skupiny, kde je vůdcovství rozloženo rovnoměrně. Tato skupina je zároveň ve třídě zřejmě dost vlivná. U všech členů skupiny je zapotřebí rozvíjet empatii. Také je můžete nechat vyzkoušet si roli, ve které nebudou ve vedoucí pozici, ale naopak budou závislí na rozhodování jiných. Samotného žáka podpořte ve spolupráci s ostatními leadery ve skupině.'
+    level3:
+      description: 'Tento žák má relativně nízkou míru vůdcovství. Ve skupině, kam patří, mají vůdcovskou roli spíše jiní žáci.'
+      recommendation: 'Žák patří do skupiny, kde je vůdcovství rozloženo nerovnoměrně. On sám má spíše řadovou pozici a vedení se neúčastní. Můžete mu pomoci rozvíjet jeho vůdcovské kompetence, a tím posílit zdravé rozložení moci ve skupině.'
+    level4:
+      description: 'Tento žák má relativně vysokou míru vůdcovství. Pravděpodobně je vedoucím ve své skupině, nebo dokonce v několika skupinách najednou. Ostatní členy jeho skupiny třída natolik vůdcovsky nevnímá.'
+      recommendation: 'Žák patří do skupiny, kde je vůdcovství rozloženo nerovnoměrně. Vypadá to, že právě on je jedním z leaderů. Podporujte u něj empatii a motivujte ho, aby část rozhodování přenechal spolužákům. Cílem je, aby byla ve skupině moc rozložena rovnoměrněji.'
+
+identification_with_assigned_group:
+  title: 'Identifikace žáka s jemu přidělenou skupinou'
+  description: 'Pokud žák vnímá, že patří do určité skupiny, tento ukazatel nám říká, nakolik si to myslí i ostatní děti.'
+  teacher:
+    level1:
+      description: 'Tento žák pravděpodobně nepatří do žádné ze skupinek ve třídě. Může se cítit vyloučený z kolektivu a nemít dostatečnou podporu v konfliktních situacích. Jako učitel mu můžete pomoci se začlenit třeba pomocí některé z team-buildingových aktivit. Nebo zkuste vést se žáky otevřenou diskusi o jejich rozčlenění do skupin a nástrojů ke zlepšení situace.'
+      recommendation: 'Tento žák je možná izolovaný. Udržujte prostředí, kde jsou všechny děti respektovány a podporujte vytváření třídní komunity. Ve třídě plánujte aktivity, které mu pomohou se více začlenit a posílí jeho pocit sounáležitosti, například skupinové projekty nebo hry.'
+    level2:
+      description: 'Ostatní žáci tohoto žáka vnímají jako člena některé ze skupin ve třídě. On sám ale neoznačil, že by do nějaké patřil, může to tedy vnímat jinak. Je také možné, že mu solitérský způsob fungování vyhovuje. '
+      recommendation: 'Podle ostatních spolužáků tento žák patří do některé ze skupin ve třídě. On sám se ale jako její součást necítí. Udržujte prostředí, kde jsou všechny děti respektovány a podporujte vytváření třídní komunity. Ve třídě plánujte aktivity, které mu pomohou se více začlenit a posílí jeho pocit sounáležitosti, například skupinové projekty nebo hry.'
+    level3:
+      description: 'Tento žák pravděpodobně patří do nějaké ze skupinek ve třídě. Sám se ale zařadil jinam, než kam patří podle ostatních spolužáků.'
+      recommendation: 'Tento žák se cítí být součástí skupiny, spolužáci ho tak ale nevnímají. Udržujte prostředí, kde jsou všechny děti respektovány a podporujte vytváření třídní komunity. Ve třídě plánujte aktivity, které mu pomohou se více začlenit a posílí jeho pocit sounáležitosti, například skupinové projekty nebo hry.'
+  psychologist:
+    level1:
+      description: 'Tento žák pravděpodobně nepatří do žádné ze skupinek ve třídě. Může se cítit vyloučený z kolektivu a nemít dostatečnou podporu v konfliktních situacích. Jako učitel mu můžete pomoci se začlenit třeba pomocí některé z team-buildingových aktivit. Nebo zkuste vést se žáky otevřenou diskusi o jejich rozčlenění do skupin a nástrojů ke zlepšení situace.'
+      recommendation: 'Tento žák je možná izolovaný. Pomoci mohou individuální konzultace – podpořte ho v budování přátelství s ostatními spolužáky. Ve třídě plánujte aktivity, které mu pomohou se více začlenit a posílí jeho pocit sounáležitosti. Vždy ale respektujte individuální potřeby žáka.'
+    level2:
+      description: 'Ostatní žáci tohoto žáka vnímají jako člena některé ze skupin ve třídě. On sám ale neoznačil, že by do nějaké patřil, může to tedy vnímat jinak. Je také možné, že mu solitérský způsob fungování vyhovuje. '
+      recommendation: 'Podle ostatních spolužáků tento žák patří do některé ze skupin ve třídě. On sám se ale jako její součást necítí. Zkuste s ním tento rozpor individuálně probrat. Chce být součástí skupiny? Co dalšího se dá udělat? Vždy ale respektujte individuální potřeby žáka. '
+    level3:
+      description: 'Tento žák pravděpodobně patří do nějaké ze skupinek ve třídě. Sám se ale zařadil jinam, než kam patří podle ostatních spolužáků.'
+      recommendation: 'Tento žák se cítí být součástí skupiny, spolužáci ho tak ale nevnímají. Zkuste s ním tento rozpor individuálně probrat. Můžete mu pomoci najít skupinu, ve které se bude cítit dobře. Případně jen sledujte, jestli žák není izolovaný a podpořte ho v začleňování do kolektivu. Vždy ale respektujte individuální potřeby žáka.'
+
+resilience:
+  title: 'Index odolnosti žáka'
+  description: 'Index odolnosti žáka ve třídě ukazuje, jak zvládá negativní vlivy v kolektivu. Odolnost vnímáme jako opak zranitelnosti. Index kombinuje čtyři ukazatele – jestli žák není obětí šikany nebo není vyloučený z kolektivu, jak zvládá svoje emoce, a také jeho duševní zdraví. Pokud bude mít jeden z nich nízkou hodnotu, zhorší se i celkový výsledek Indexu odolnosti žáka. '
+  parent:
+    low:
+      description: 'Tento žák má relativně nízký Index odolnosti. Může být zranitelnější než ostatní. Jako učitel mu poskytněte extra podporu. „Pozor, složitá situace! Přizvěte prosím ke spolupráci školního psychologa.”'
+      recommendation: 'Dítěti pravděpodobně ve třídě není dobře, může být izolované či depresivní. Zkuste si s ním otevřeně promluvit o tom, co prožívá, a jak se ve třídě cítí. Kontaktujte školního psychologa.'
+    middle:
+      description: 'Tento žák má průměrný index odolnosti. Pravděpodobně je schopen složité situace nějak zvládat, stále je ale spíše zranitelnější.'
+      recommendation: 'Vaše dítě je zřejmě do nějaké míry odolné vůči skupinovým i individuálním nepříjemnostem a rizikovým faktorům, může se ale potýkat s problémy. Podporujte ho v péči o emocionální zdraví a na řešení situace spolupracujte také s třídním učitelem či psychologem.'
+    high:
+      description: 'Tento žák má vysokou míru odolnosti. Vypadá to, že není příliš vystaven negativním vlivům ve třídě, nebo je dobře zvládá.'
+      recommendation: 'Vaše dítě je zřejmě odolné proti nepříznivým vlivům nebo se s nimi ve třídě nedostává do kontaktu. '
+  teacher:
+    low:
+      description: 'Tento žák má relativně nízký Index odolnosti. Může být zranitelnější než ostatní. Jako učitel mu poskytněte extra podporu. „Pozor, složitá situace! Přizvěte prosím ke spolupráci školního psychologa.”'
+      recommendation: 'Žákovi pravděpodobně ve třídě není dobře, je zranitelný a možná se necítí v bezpečí. Může být izolovaný či depresivní. Kontaktujte školního psychologa.'
+    middle:
+      description: 'Tento žák má průměrný index odolnosti. Pravděpodobně je schopen složité situace nějak zvládat, stále je ale spíše zranitelnější.'
+      recommendation: 'Žák je zřejmě do nějaké míry odolný vůči skupinovým i individuálním nepříjemnostem a rizikovým faktorům, může se ale potýkat s problémy. Kontaktujte školního psychologa. Můžete mu pomoci rozvíjet emoční regulaci a schopnost zvládat stres.'
+    high:
+      description: 'Tento žák má vysokou míru odolnosti. Vypadá to, že není příliš vystaven negativním vlivům ve třídě, nebo je dobře zvládá.'
+      recommendation: 'Žák je zřejmě odolný vůči skupinovým i individuálním nepříjemnostem a rizikovým faktorům a ve třídě se cítí dobře. Můžete ho ještě podpořit v rozvoji kompetencí pro zvládání stresu a emoční regulace.'
+  psychologist:
+    low:
+      description: 'Tento žák má relativně nízký Index odolnosti. Může být zranitelnější než ostatní. Jako učitel mu poskytněte extra podporu. „Pozor, složitá situace! Přizvěte prosím ke spolupráci školního psychologa.”'
+      recommendation: 'Žákovi pravděpodobně ve třídě není dobře, je zranitelný a možná se necítí v bezpečí. Může být izolovaný, depresivní, špatně přijímaný ve vlastní skupině, nebo je dokonce obětí nepřátelského chování. Vaším klíčovým úkolem bude zajistit pro něj bezpečné prostředí. Může také potřebovat individuální dlouhodobou psychoterapii.'
+    middle:
+      description: 'Tento žák má průměrný index odolnosti. Pravděpodobně je schopen složité situace nějak zvládat, stále je ale spíše zranitelnější.'
+      recommendation: 'Žák je zřejmě do nějaké míry odolný vůči skupinovým i individuálním nepříjemnostem a rizikovým faktorům, může se ale potýkat s problémy. Podpořte ho v rozvoji kompetencí pro zvládání stresu a emoční regulace.'
+    high:
+      description: 'Tento žák má vysokou míru odolnosti. Vypadá to, že není příliš vystaven negativním vlivům ve třídě, nebo je dobře zvládá.'
+      recommendation: 'Žák se ve třídě pravděpodobně cítí dobře. Je zřejmě dost odolný vůči skupinovým i individuálním nepříjemnostem a rizikovým faktorům. Netrpí pravděpodobně depresivními stavy, ani není terčem nepřátelského chování. Můžete ho ještě podpořit v rozvoji kompetencí pro zvládání stresu a emoční regulace.'
+
+internalization:
+  title: 'Míra internalizace žáka'
+  description: 'Tento ukazatel nám říká, jak moc žák podle ostatních dětí trpí zhoršeným mentálním zdravím. Jde třeba o smutné nálady, úzkosti, uzavřenost nebo celkový stres.'
+  parent:
+    low:
+      description: 'Tento žák podle ostatních zvládá svoje emoce dobře a jeho mentální zdraví děti vnímají jako bezproblémové. Spolužáci nemluví o tom, že by byl často smutný nebo ve stresu.'
+      recommendation: 'Vaše dítě pravděpodobně zvládá své emoce dobře.'
+    middle:
+      description: 'Podle některých ze spolužáků je tento žák často smutný. Je pravděpodobné, že se potýká s nějakými emočními výzvami.'
+      recommendation: 'Vaše dítě může v poslední době čelit určitým emočním výzvám. Zvažte setkání se školním psychologem.'
+    high:
+      description: 'O tomto žákovi ostatní říkají, že je často smutný. Může mít zhoršené duševní zdraví – je pro něj například těžké zvládat práci s vlastními emocemi a frustraci může obracet vůči sobě. Často se k tomu přidává také snížené sebevědomí a pocit, že nikam nezapadá. Jako učitel vytvářejte bezpečné prostředí pro všechny žáky. Buďte ale pozorní především k potřebám takto zranitelných dětí a nabídněte jim extra podporu. '
+      recommendation: 'Vaše dítě pravděpodobně v poslední době čelí závažnějším emočním výzvám. Doporučujeme vyhledat odbornou psychologickou pomoc. Spolupracujte také se školním psychologem a třídním učitelem.'
+  teacher:
+    low:
+      description: 'Tento žák podle ostatních zvládá svoje emoce dobře a jeho mentální zdraví děti vnímají jako bezproblémové. Spolužáci nemluví o tom, že by byl často smutný nebo ve stresu.'
+      recommendation: 'Ostatní spolužáci žáka vnímají jako někoho, kdo zvládá dobře své emoce.'
+    middle:
+      description: 'Podle některých ze spolužáků je tento žák často smutný. Je pravděpodobné, že se potýká s nějakými emočními výzvami.'
+      recommendation: 'Podle ostatních spolužáků může tento žák v poslední době čelit emočním výzvám. Konzultujte situaci se školním psychologem.'
+    high:
+      description: 'O tomto žákovi ostatní říkají, že je často smutný. Může mít zhoršené duševní zdraví – je pro něj například těžké zvládat práci s vlastními emocemi a frustraci může obracet vůči sobě. Často se k tomu přidává také snížené sebevědomí a pocit, že nikam nezapadá. Jako učitel vytvářejte bezpečné prostředí pro všechny žáky. Buďte ale pozorní především k potřebám takto zranitelných dětí a nabídněte jim extra podporu. '
+      recommendation: 'Podle ostatních spolužáků tento žák pravděpodobně čelí závažným situacím a emočním výzvám. Konzultujte situaci se školním psychologem.'
+  psychologist:
+    low:
+      description: 'Tento žák podle ostatních zvládá svoje emoce dobře a jeho mentální zdraví děti vnímají jako bezproblémové. Spolužáci nemluví o tom, že by byl často smutný nebo ve stresu.'
+      recommendation: 'Ostatní spolužáci žáka vnímají jako někoho, kdo zvládá dobře své emoce.'
+    middle:
+      description: 'Podle některých ze spolužáků je tento žák často smutný. Je pravděpodobné, že se potýká s nějakými emočními výzvami.'
+      recommendation: 'Podle ostatních spolužáků může tento žák v poslední době čelit emočním výzvám. Doporučujeme individuální konzultaci. Také ve třídě můžete začít s programem podporujícím zvládání stresu a emoční regulace. '
+    high:
+      description: 'O tomto žákovi ostatní říkají, že je často smutný. Může mít zhoršené duševní zdraví – je pro něj například těžké zvládat práci s vlastními emocemi a frustraci může obracet vůči sobě. Často se k tomu přidává také snížené sebevědomí a pocit, že nikam nezapadá. Jako učitel vytvářejte bezpečné prostředí pro všechny žáky. Buďte ale pozorní především k potřebám takto zranitelných dětí a nabídněte jim extra podporu. '
+      recommendation: 'Podle ostatních spolužáků tento žák pravděpodobně čelí závažným situacím a emočním výzvám. Není vyloučeno, že je terčem skrytého nepřátelského chování ve třídě nebo v rodině. Poskytněte mu bezprostřední psychologickou pomoc. Na dalších krocích spolupracujte také s rodiči a třídním učitelem. na dalších krocích. '
+
+victimization_indegree:
+  title: 'Míra viktimizace žáka'
+  description: 'Tento ukazatel nám říká, jak moc ostatní žáci ve třídě vnímají toto dítě jako oběť šikany.  '
+  parent:
+    low:
+      description: 'Vypadá to, že tento žák není obětí šikany a prostředí ve třídě je pro něj bezpečné. Může se ale potýkat se skrytou šikanou.'
+      recommendation: 'Vaše dítě pravděpodobně není ostatními spolužáky šikanováno.'
+    high:
+      description: 'Ostatní děti tohoto žáka často označují jako oběť šikany a všímají si nepřátelského chování vůči němu. Jako učitel mu poskytněte extra podporu a bezpečné prostředí a vůči šikaně neprodleně zasáhněte. Podnikněte kroky k obnovení bezpečné atmosféry ve třídě.'
+      recommendation: 'Vaše dítě může být terčem nepřátelského chování některýh spolužáků. Postupujte opatrně. Dítě s tímto zjištěním nekonfrontujte, situaci se rozhodně nesnažte vyřešit sami. Spojte se nejprve se školním psychologem a třídním učitelem. Pokud se ve třídě vyskytuje šikana, bývá to obvykle záležitostí celého kolektivu.'
+  teacher:
+    low:
+      description: 'Vypadá to, že tento žák není obětí šikany a prostředí ve třídě je pro něj bezpečné. Může se ale potýkat se skrytou šikanou.'
+      recommendation: 'Žák pravděpodobně není ostatními spolužáky šikanován.'
+    high:
+      description: 'Ostatní děti tohoto žáka často označují jako oběť šikany a všímají si nepřátelského chování vůči němu. Jako učitel mu poskytněte extra podporu a bezpečné prostředí a vůči šikaně neprodleně zasáhněte. Podnikněte kroky k obnovení bezpečné atmosféry ve třídě.'
+      recommendation: 'Podle ostatních spolužáků může být tento žák obětí šikany. Zasáhněte proti takovému chování a nabídněte oběti extra podporu. Konzultujte situaci se školním psychologem.'
+  psychologist:
+    low:
+      description: 'Vypadá to, že tento žák není obětí šikany a prostředí ve třídě je pro něj bezpečné. Může se ale potýkat se skrytou šikanou.'
+      recommendation: 'Žák pravděpodobně není ostatními spolužáky šikanován. Nemůžeme ovšem vyloučit, že je obětí skryté šikany, kterou jeho spolužáci nevidí.'
+    high:
+      description: 'Ostatní děti tohoto žáka často označují jako oběť šikany a všímají si nepřátelského chování vůči němu. Jako učitel mu poskytněte extra podporu a bezpečné prostředí a vůči šikaně neprodleně zasáhněte. Podnikněte kroky k obnovení bezpečné atmosféry ve třídě.'
+      recommendation: 'Podle ostatních spolužáků může být tento žák obětí šikany. Zasáhněte proti takovému chování a nabídněte oběti extra podporu. Agresor nemusí být pouze jeden, do šikany může být zapojeno i více spolužáků. Ostatní, kteří situaci přehlížejí, přitom umožňují, aby se děla. Proto je třeba pracovat s celou třídou, nejen s hlavními aktéry označenými v dotazníku.'
+
+closeness_friendships:
+  title: 'Míra blízkosti žáka k ostatním spolužákům'
+  description: 'V tomto ukazateli vidíme, jak moc je žák podle ostatních v centru dění a jak blízko má k ostatním spolužákům.'
+  parent:
+    low:
+      description: 'Tento žák si pravděpodobně s ostatními není příliš blízký. Vypadá to, že je někde na okraji kolektivu a může pro něj být obtížné to změnit.'
+      recommendation: 'Vaše dítě je možná na okraji třídního kolektivu. Spojte se s třídním učitelem a proberte spolu možnosti, jak dítěti pomoci se lépe začlenit mezi spolužáky.'
+    middle:
+      description: 'Tento žák je pravděpodobně někde mezi jádrem a okrajem kolektivu.'
+      recommendation: 'Vaše dítě se nachází někde mezi jádrem a okrajem kolektivu. Podporujte ho v navazování dalších kamarádství a v rozvoji sociálních dovedností. Také může pomoci zorganizovat pro děti událost, která jim dá příležitost navazovat nová přátelství.'
+    high:
+      description: 'Tento žák je pravděpodobně v jádru kolektivu a má blízko k ostatním spolužákům.'
+      recommendation: 'Vaše dítě je pravděpodobně přímo v jádru kolektivu. Podporujte ho, aby využívalo svého vlivu k účelům, které pomohou celé třídě. '
+  teacher:
+    low:
+      description: 'Tento žák si pravděpodobně s ostatními není příliš blízký. Vypadá to, že je někde na okraji kolektivu a může pro něj být obtížné to změnit.'
+      recommendation: 'Žák je pravděpodobně spíše na okraji kolektivu. Podporujte aktivity, které pomáhají dětem se začlenit a zvyšují rozmanité interakce ve třídě. Konzultujte situaci se školním psychologem.'
+    middle:
+      description: 'Tento žák je pravděpodobně někde mezi jádrem a okrajem kolektivu.'
+      recommendation: 'Žák se nachází někde mezi jádrem a okrajem kolektivu. Pomůže, pokud mu dáte příležitosti k navázání nových přátelství. Také se hodí rozvíjet jeho sociální kompetence, například pomocí nějakého programu na jejich podporu.'
+    high:
+      description: 'Tento žák je pravděpodobně v jádru kolektivu a má blízko k ostatním spolužákům.'
+      recommendation: 'Žák je přímo v jádru kolektivu. Zkuste s ním pracovat na využití jeho pozice pro blaho celé třídy.'
+  psychologist:
+    low:
+      description: 'Tento žák si pravděpodobně s ostatními není příliš blízký. Vypadá to, že je někde na okraji kolektivu a může pro něj být obtížné to změnit.'
+      recommendation: 'Žák je pravděpodobně spíše na okraji kolektivu. Podporujte aktivity, které pomáhají dětem se začlenit a zvyšují rozmanité interakce ve třídě.'
+    middle:
+      description: 'Tento žák je pravděpodobně někde mezi jádrem a okrajem kolektivu.'
+      recommendation: 'Žák se nachází někde mezi jádrem a okrajem kolektivu. Pomůže, pokud mu dáte příležitosti k navázání nových přátelství. Také se hodí rozvíjet jeho sociální kompetence, například pomocí nějakého programu na jejich podporu.'
+    high:
+      description: 'Tento žák je pravděpodobně v jádru kolektivu a má blízko k ostatním spolužákům.'
+      recommendation: 'Žák je přímo v jádru kolektivu. Může to pro něj být bezpečná situace, možná je ale nucen o vliv a moc bojovat. Zkuste s ním v rámci individuálních konzultací pracovat na využití jeho pozice pro blaho celé třídy.'
+
+group_identification:
+  title: 'Míra přijetí žáka v jeho vlastní skupině'
+  description: 'Tento žák se cítí jako člen některé z třídních skupinek. Ukazatel nám říká, jestli ho ostatní členové této skupiny považují za kamaráda, a jak moc je ve skupině přijímaný.'
+  parent:
+    low:
+      description: 'Žáci ze skupiny, kam žák podle svého názoru patří, ho příliš nepovažují za kamaráda. „Pozor, složitá situace! Přizvěte prosím ke spolupráci školního psychologa.” '
+      recommendation: 'Vypadá to, že členové skupiny, do které vaše dítě pravděpodobně patří, ho příliš nepřijímají, což může být zraňující. Konzultujte situaci se školním psychologem.'
+    high:
+      description: 'Žáci ze skupiny, kam žák podle svého názoru patří, s ním také kamarádí.'
+      recommendation: 'Vypadá to, že členové skupiny, do které vaše dítě pravděpodobně patří, ho přijímají. To může zvyšovat jeho odolnost proti stresu a jiným nepříznivým vlivům ve třídě.'
+  teacher:
+    low:
+      description: 'Žáci ze skupiny, kam žák podle svého názoru patří, ho příliš nepovažují za kamaráda. „Pozor, složitá situace! Přizvěte prosím ke spolupráci školního psychologa.”'
+      recommendation: 'Vypadá to, že členové skupiny, do které žák pravděpodobně patří, ho příliš nepřijímají, což může být zraňující. Konzultujte situaci se školním psychologem.'
+    high:
+      description: 'Žáci ze skupiny, kam žák podle svého názoru patří, s ním také kamarádí.'
+      recommendation: 'Vypadá to, že členové skupiny, do které žák pravděpodobně patří, ho přijímají. To může zvyšovat jeho odolnost proti stresu a jiným nepříznivým vlivům ve třídě.'
+  psychologist:
+    low:
+      description: 'Žáci ze skupiny, kam žák podle svého názoru patří, ho příliš nepovažují za kamaráda. „Pozor, složitá situace! Přizvěte prosím ke spolupráci školního psychologa.” '
+      recommendation: 'Vypadá to, že členové skupiny, do které žák pravděpodobně patří, ho příliš nepřijímají, což může být zraňující. Zkuste zjistit, zda žák k této skupině opravdu patří – výsledek průzkumu nemusí být přesný. Následně můžete pracovat s celou skupinou a poskytnout podporu při začlenění.'
+    high:
+      description: 'Žáci ze skupiny, kam žák podle svého názoru patří, s ním také kamarádí.'
+      recommendation: 'Vypadá to, že členové skupiny, do které žák pravděpodobně patří, ho přijímají. To může zvyšovat jeho odolnost proti stresu a jiným nepříznivým vlivům ve třídě.'
+
+defending_indegree:
+  title: 'Míra bránění nebo utěšování žáka'
+  description: 'Říká nám, jestli si ostatní spolužáci všímají, že žáka někdo z nich brání nebo utěšuje v krizových situacích.'
+  low:
+    description: 'Tohoto žáka pravděpodobně nikdo nebrání nebo neutěšuje. Na to je ale vždy potřeba se podívat v kontextu nepřátelského chování vůči němu. Pokud ho nikdo nešikanuje, není pravděpodobně obrana či utěšování potřeba. Také je důležitá informace o duševním zdraví žáka – pokud je zhoršené a nikdo jej neutěšuje, jako učitel mu můžete pomoci najít mezi spolužáky spojence. Také je dobré obecně podporovat empatii a sounáležitost ve třídě. '
+  high:
+    description: 'Tento žáka pravděpodobně někdo ze spolužáků brání či utěšuje, když je to potřeba. '
+
+defending_outdegree:
+  title: 'Míra nakolik žák brání nebo utěšuje druhé'
+  description: 'Říká nám, jestli spolužáci vnímají žáka jako někoho, kdo brání ostatní děti před šikanou nebo agresivním chováním. '
+  low:
+    description: 'Tento žák se zřejmě do obrany nebo utěšování ostatních příliš nepouští. Nemusí to ale být ani potřeba, důležité je se na informaci podívat v kontextu s mírou nepřátelského chování ve třídě. Pokud je nízká, pravděpodobně není obrana či utěšování potřeba. Zkuste jako učitel zjistit, jaké jsou ve třídě normy. Je v kolektivu důležité postavit se na obranu oběti nebo je to odsuzováno? Pokud třída obranáře příliš neoceňuje, zkuste pracovat na nastavení nových norem proti šikaně a pro podporu obrany a empatie.'
+    recommendation: 'Tento žák se zřejmě do obrany nebo utěšování ostatních příliš nepouští. Pracujte spolu na rozvíjení empatie a vysvětlete mu, jak důležité je pomáhat ostatním, pokud se vyskytne nějaká nepříjemná situace týkající se vztahů ve třídě.'
+  high:
+    description: 'Tento žák pravděpodobně brání či utěšuje ostatní, když je to potřeba. Tuto informaci je třeba dát také do kontextu s mírou nepřátelského chování ve třídě. Obecně je přínosné zjistit, jaké jsou ve třídě normy. Je v kolektivu důležité postavit se na obranu oběti nebo je to odsuzováno? Jako učitel můžete před třídou ocenit obranné nebo utěšující chování tohoto žáka, nejlépe přímo při činu. Dejte si jen pozor, abyste situaci správně interpretovali. Někdy zvenčí vypadá jako obrana také skryté nepřátelské chování.'
+    recommendation: 'Tento žák pravděpodobně brání či utěšuje ostatní, když je to potřeba. Zkuste zjistit, že pomáhá skutečně obětem a ne jiným spolužákům, a pokud je to tak, oceňte jeho snahu.'
+
+bullying_outdegree:
+  title: 'Míra nepřátelského chování žáka'
+  description: 'Říká nám, jak se žák podle ostatních dětí ke spolužákům chová, jestli je agresivní nebo šikanuje ostatní.'
+  low:
+    description: 'Tento žák pravděpodobně nešikanuje ostatní. Může to ale také dělat skrytě.'
+    recommendation: 'Žák pravděpodobně nešikanuje ostatní.'
+  high:
+    description: 'Tento žák se zřejmě účastní šikanování spolužáků – většina žáků si takového chování u něj všímá. Jako učitel vůči šikaně neprodleně zasáhněte a zapojte do procesu také rodiče. Podnikněte kroky k obnovení bezpečné atmosféry ve třídě.'
+    recommendation: 'Tento žák se zřejmě účastní šikanování spolužáků – většina žáků si takového chování u něj všímá. Pozor, označení někoho jako agresora v dotazníku Younglink může sloužit jako osobní msta, nebo tímto může být žák naopak ostatními šikanován. Proto než uděláte závěr, důkladně situaci prošetřete. Pokud je žák skutečně agresor, neprodleně zasáhněte, a do procesu zapojte také třídního učitele a rodiče. Agresora samotného se pokuste dostat spíše na stranu pomoci oběti. Na obnovení bezpečné atmosféry ve třídě spolupracujte se všemi dětmi.'
+
+all_friendship_network:
+  title: 'Síť všech kamarádských vztahů ve třídě'
+  description: 'Na tomto grafu vidíme síť všech kamarádských vazeb ve třídě, neboli sociogram. Každá modrá čára propojující dva žáky znamená, že spolu kamarádí a tráví volný čas. V grafu vidíte pouze vazby, které potvrdili dva a více dalších žáků. Pokud v grafu modrá propojení chybí, buď ve třídě přátelství nejsou, nebo je ostatní nevidí. Pokud je naopak modrá síť hustá, je to dobrý znak, že spolu třída kamarádí a nenechává nikoho na okraji.'
+
+group_count_network:
+  title: 'Síť počtu skupin ve třídě '
+  description: 'Barevné označení jednotlivých žáků v rámci sociogramu ukazuje, jak žáci vnímají rozložení skupin v kolektivu, tedy, do jakých skupin žáci přiřadili jednotlivé spolužáky. Ve třídě je pravděpodobně N různých skupin žáků. Žáci, kteří nemají žádnou barvu, pravděpodobně nepatří do žádné skupiny. Mohou se cítit izolovaně a zažívat pocity samoty. Žáci, kteří jsou označeni více barvami, jsou pravděpodobně součástí více skupin. Mohou být klíčovými spolužáky, kteří skupiny propojují mezi sebou a pomáhají proudění informací napříč třídou. Možná jsou vlivní a populární, na druhou stranu se ale mohou cítit ve své roli sami a mít pocit, že ani do jedné ze skupin pořádně nezapadají.'
+
+aggression_defending_network:
+  title: 'Síť vazeb nepřátelského a obranného chování'
+  description: 'Na tomto grafu vidíme dva typy vazeb. První typ je znázorněn červenou barvou a představuje síť vazeb nepřátelského chování ve třídě. Každá červená čára propojující dva žáky naznačuje, že jeden z nich projevuje nepřátelské chování vůči druhému. Čím silnější červená čára je, tím více spolužáků si problému všímá. Při tenčí čáře může jít o skrytější formy nepřátelského chování, které ale může být stejně závažné nebo mnohdy i destruktivnější než viditelná agrese.  Druhý typ je znázorněn modrou barvou a představuje síť toho, jak se žáci mezi sebou navzájem brání nebo utěšují. Každá modrá čára říká, že alespoň N dalších dětí si všímá obranného chování nebo utěšování, které projevuje jeden z propojených žáků vůči druhému. Čím silnější čára je, tím je takové chování pro ostatní viditelnější. Pokud na grafu žádnou modrou čáru nevidíte, znamená to, že se děti mezi sebou nebrání a neutěšují, nebo to není pro ostatní dostatečně viditelné. Informace z tohoto grafu je důležité dát do spojitosti s informacemi o nepřátelském chování. Zjistíte tak, jestli jsou spíše bráněny oběti nebo agresoři.'
+
+group_conflict_marker:
+  title: 'Ukazatel skupinového konfliktu'
+  description: '-'
+  teacher:
+    level1:
+      description: 'Tato skupina dětí má pravděopodobně konflikt s jinou skupinou. Členové obou skupin navzájem projevují nepřátelské chování a spolužáci ve třídě si toho všímají.'
+      recommendation: ''
+    level2:
+      description: 'Některá ze skupin ve třídě pravděpodobně nedrží dobře pohromadě a může trpět konfliktem mezi svými členy.'
+      recommendation: ''
+    level3:
+      description: 'Vypadá to, že tato skupina je nekonfliktní.'
+      recommendation: ''
+    level4:
+      description: 'V rámci této skupiny mohou mezi dětmi nastávat konflikty. Někteří její členové mohou ubližovat ostatním členům.'
+      recommendation: ''
+    level5:
+      description: 'Tato skupina dětí má pravděopodobně konflikt s jinou skupinou. Členové obou skupin navzájem projevují nepřátelské chování a spolužáci ve třídě si toho všímají.'
+      recommendation: ''
+  psychologist:
+    level1:
+      description: 'V této třídě mezi sebou možná mají konflikt celé skupiny dětí.'
+      recommendation: 'Některé skupiny ve třídě mezi sebou zřejmě mají konflikt. Podpořte děti v jeho řešení a naučte spolu členy různých skupin komunikovat s respektem. Pomoci může také skupinová terapie k posílení pozitivních vztahů ve třídě.'
+    level2:
+      description: 'Některá ze skupin ve třídě pravděpodobně nedrží dobře pohromadě a může trpět konfliktem mezi svými členy.'
+      recommendation: 'V některé z třídních skupin spolu mohou mít její členové konflikt navzájem. Zvažte skupinovou terapii v rámci této skupiny, kde budete pracovat se skupinovou identitou. Aby se ale prostředí ve třídě nepolarizovalo, podpořte také konstruktivní komunikaci a budování vztahů jednotlivých členů s ostatními skupinami.'
+    level3:
+      description: 'Vypadá to, že tato skupina je nekonfliktní.'
+      recommendation: ''
+    level4:
+      description: 'V rámci této skupiny mohou mezi dětmi nastávat konflikty. Někteří její členové mohou ubližovat ostatním členům.'
+      recommendation: ''
+    level5:
+      description: 'Tato skupina dětí má pravděopodobně konflikt s jinou skupinou. Členové obou skupin navzájem projevují nepřátelské chování a spolužáci ve třídě si toho všímají.'
+      recommendation: ''
+
+friendship_network_position:
+  title: 'Pozice žáka v síti kamarádství'
+  description: 'Na tomto obrázku vidíte pomocí modrých čar znázorněné kamarádské vazby vašeho dítěte ve třídě. Jména ostatních dětí nezobrazujeme pro zachování anonymity. Uvidíte také informaci o tom, s kolika dětmi se vaše dítě kamarádí a jaký má ve třídě vliv.'
+  parent:
+    level1:
+      description: 'Vaše dítě ve třídě pravděpodobně nemá žádné kamarády a může se cítit osamoceně. Zkuste si s ním promluvit o tom, jak se cítí, a zjistit, jestli není vyčleněno z kolektivu. Společně s třídním učitelem můžete také zkusit vymyslet kroky, které povedou k většímu zapojení vašeho dítěte. Jako rodič můžete také dítěti s vytvářením kamarádství pomoci například uspořádáním oslavy, na kterou spolužáky pozvete.'
+      recommendation: ''
+    level2:
+      description: 'Vaše dítě má ve třídě jen jednoho nebo dva kamarády. Některé děti se mohou v takové situaci cítit osamoceně, jiným ale menší množství hlubších vztahů vyhovuje. Zkuste si s ním promluvit o tom, jak se cítí, a zjistit, jestli není vyčleněno z kolektivu. '
+      recommendation: ''
+    level3:
+      description: 'Vaše dítě má ve třídě několik kamarádů, se kterými tráví volný čas. Můžete jej podpořit, aby se zkusilo skamarádit i s dalšími spolužáky, kteří například nejsou součástí jeho skupiny ve třídě.'
+      recommendation: ''
+    level4:
+      description: 'Vaše dítě má ve třídě poměrně velké množství kamarádů. Může být ve třídě dokonce populární a mít na ostatní spolužáky vliv. Zkuste si s ním promluvit o tom, jak se v takové pozici cítí. Pokud je vaše dítě v centru většiny kamarádských vazeb na obrázku, může vědomě nebo nevědomě bránit ostatním, aby si vytvořili kamarádství i mezi sebou.'
+      recommendation: ''
+  teacher:
+    level1:
+      description: 'Tento žák ve třídě pravděpodobně nemá žádné kamarády. Může se cítit osamoceně. Důležité je zjistit, jestli není vyčleněný z kolektivu ve třídě. Společně s rodičem žáka můžete vymyslet plán na zapojení dítěte do kolektivu. Kromě toho můžete jako učitel vytvářet příležitosti k vytvoření kamarádství, například pomocí skupinových úkolů podporujících spolupráci.'
+      recommendation: 'Zkuste žáka aktivně zapojovat do kolektivu a vytvořit mu dostatek příležitostí k navázání nových přátelství.'
+    level2:
+      description: 'Tento žák má ve třídě jen jednoho nebo dva kamarády. Některé děti se mohou v takové situaci cítit osamoceně, jiným ale menší počet hlubších vztahů vyhovuje. Důležité je zjistit, jestli není vyčleněný z kolektivu ve třídě.'
+      recommendation: 'Podporujte komunikaci mezi žákem a ostatními spolužáky, vytvářejte společné aktivity a žáka do nich zapojujte.'
+    level3:
+      description: 'Žák má ve třídě několik kamarádů, se kterými tráví volný čas. Můžete jej jako učitel podpořit, aby se zkusil skamarádit i s dalšími spolužáky, kteří například nejsou součástí jeho skupiny ve třídě.'
+      recommendation: 'Žák má ve třídě zřejmě dostatek přátel'
+    level4:
+      description: 'Žák má ve třídě poměrně velké množství kamarádů. Může být ve třídě dokonce populární a mít na ostatní spolužáky vliv. Pokud je ale žák v centru většiny kamarádských vazeb na obrázku, může vědomě nebo nevědomě bránit ostatním, aby si vytvořili kamarádství i mezi sebou.'
+      recommendation: 'Tento žák má zřejmé velký počet kamarádů a může mít větší vliv na třídní dynamiku. Podporujte u něj empatii k druhým.'
+  psychologist:
+    level1:
+      description: 'Tento žák ve třídě pravděpodobně nemá žádné kamarády. Může se cítit osamoceně. Důležité je zjistit, jestli není vyčleněný z kolektivu ve třídě. Společně s rodičem žáka můžete vymyslet plán na zapojení dítěte do kolektivu. Kromě toho můžete jako učitel vytvářet příležitosti k vytvoření kamarádství, například pomocí skupinových úkolů podporujících spolupráci.'
+      recommendation: 'Žáka by v získání kamarádských vztahů mohla podpořit individuální terapie s důrazem na rozvoj sociálních kompetencí. Pracujte také se třídou, a to tak, aby měl tento žák příležitosti pro zapojení se do kolektivu.'
+    level2:
+      description: 'Tento žák má ve třídě jen jednoho nebo dva kamarády. Některé děti se mohou v takové situaci cítit osamoceně, jiným ale menší počet hlubších vztahů vyhovuje. Důležité je zjistit, jestli není vyčleněný z kolektivu ve třídě.'
+      recommendation: 'Pomozte žákovi navázat nová přátelství. Se třídou můžete pracovat na aktivitách, které podporují spolupráci a budování nových vztahů.'
+    level3:
+      description: 'Žák má ve třídě několik kamarádů, se kterými tráví volný čas. Můžete jej jako učitel podpořit, aby se zkusil skamarádit i s dalšími spolužáky, kteří například nejsou součástí jeho skupiny ve třídě.'
+      recommendation: 'Vypadá to, že žák má ve třídě dostatek přátel. Můžete mu pomoci si kamarádství udržet, nebo s ním mluvit o vlivu, který ve třídě může mít. Podpořte ho, aby se k ostatním choval s respektem a pomáhal spolužákům vytvářet rovnocenná přátelství s ostatními.'
+    level4:
+      description: 'Žák má ve třídě poměrně velké množství kamarádů. Může být ve třídě dokonce populární a mít na ostatní spolužáky vliv. Pokud je ale žák v centru většiny kamarádských vazeb na obrázku, může vědomě nebo nevědomě bránit ostatním, aby si vytvořili kamarádství i mezi sebou.'
+      recommendation: 'Proberte s žákem vliv, který ve třídě může mít. Podpořte ho, aby se k ostatním choval s respektem a pomáhal spolužákům vytvářet rovnocenná přátelství s ostatními.'

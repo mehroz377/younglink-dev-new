@@ -1,0 +1,105 @@
+includes:
+    - vendor/symplify/phpstan-rules/config/services/services.neon
+
+services:
+    -
+        class: Symplify\PHPStanRules\Rules\AnnotateRegexClassConstWithRegexLinkRule
+        tags: [phpstan.rules.rule]
+    -
+        class: Symplify\PHPStanRules\Rules\BoolishClassMethodPrefixRule
+        tags: [phpstan.rules.rule]
+    -
+        class: Symplify\PHPStanRules\Rules\CheckClassNamespaceFollowPsr4Rule
+        tags: [phpstan.rules.rule]
+    -
+        class: Symplify\PHPStanRules\Rules\CheckTypehintCallerTypeRule
+        tags: [phpstan.rules.rule]
+    -
+        class: Symplify\PHPStanRules\Rules\ClassNameRespectsParentSuffixRule
+        tags: [phpstan.rules.rule]
+    -
+        class: Symplify\PHPStanRules\Rules\ExclusiveDependencyRule
+        tags: [phpstan.rules.rule]
+        arguments:
+            allowedExclusiveDependencyInTypes:
+                Doctrine\ORM\EntityManager:
+                    - *Repository
+
+                Doctrine\ORM\EntityManagerInterface:
+                    - *Repository
+    -
+        class: Symplify\PHPStanRules\Rules\ForbiddenAnonymousClassRule
+        tags: [phpstan.rules.rule]
+    -
+        class: Symplify\PHPStanRules\Rules\ForbiddenFuncCallRule
+        tags: [phpstan.rules.rule]
+        arguments:
+            forbiddenFunctions:
+                - eval
+    -
+        class: Symplify\PHPStanRules\Rules\ForbiddenMultipleClassLikeInOneFileRule
+        tags: [phpstan.rules.rule]
+    -
+        class: Symplify\PHPStanRules\Rules\ForbiddenNestedCallInAssertMethodCallRule
+        tags: [phpstan.rules.rule]
+    -
+        class: Symplify\PHPStanRules\Rules\ForbiddenNodeRule
+        tags: [phpstan.rules.rule]
+        arguments:
+            forbiddenNodes:
+                - PhpParser\Node\Expr\ErrorSuppress
+    -
+        class: Symplify\PHPStanRules\Rules\ForbiddenTestsNamespaceOutsideTestsDirectoryRule
+        tags: [phpstan.rules.rule]
+    -
+        class: Symplify\PHPStanRules\Rules\NoEmptyClassRule
+        tags: [phpstan.rules.rule]
+    -
+        class: Symplify\PHPStanRules\Rules\NoFuncCallInMethodCallRule
+        tags: [phpstan.rules.rule]
+    -
+        class: Symplify\PHPStanRules\Rules\NoInlineStringRegexRule
+        tags: [phpstan.rules.rule]
+    -
+        class: Symplify\PHPStanRules\Rules\NoIssetOnObjectRule
+        tags: [phpstan.rules.rule]
+    -
+        class: Symplify\PHPStanRules\Rules\NoMissingDirPathRule
+        tags: [phpstan.rules.rule]
+    -
+        class: Symplify\PHPStanRules\Rules\NoParentMethodCallOnNoOverrideProcessRule
+        tags: [phpstan.rules.rule]
+
+    -
+        class: Symplify\PHPStanRules\Rules\NoReferenceRule
+        tags: [phpstan.rules.rule]
+    -
+        class: Symplify\PHPStanRules\ObjectCalisthenics\Rules\NoShortNameRule
+        tags: [phpstan.rules.rule]
+        arguments:
+            minNameLength: 3
+            allowedShortNames: ['id', 'to']
+    -
+        class: Symplify\PHPStanRules\Rules\PreventDuplicateClassMethodRule
+        tags: [phpstan.rules.rule]
+    -
+        class: Symplify\PHPStanRules\Rules\PreventParentMethodVisibilityOverrideRule
+        tags: [phpstan.rules.rule]
+    -
+        class: Symplify\PHPStanRules\Rules\RegexSuffixInRegexConstantRule
+        tags: [phpstan.rules.rule]
+    -
+        class: Symplify\PHPStanRules\Rules\RequireThisCallOnLocalMethodRule
+        tags: [phpstan.rules.rule]
+    -
+        class: Symplify\PHPStanRules\Rules\RequireThisOnParentMethodCallRule
+        tags: [phpstan.rules.rule]
+    -
+        class: Symplify\PHPStanRules\Rules\SuffixInterfaceRule
+        tags: [phpstan.rules.rule]
+    -
+        class: Symplify\PHPStanRules\Rules\SuffixTraitRule
+        tags: [phpstan.rules.rule]
+    -
+        class: Symplify\PHPStanRules\Rules\UppercaseConstantRule
+        tags: [phpstan.rules.rule]

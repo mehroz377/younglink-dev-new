@@ -1,0 +1,11 @@
+.container {
+    margin: 0 auto;
+
+    &--full-page {
+        max-width: $page-max-width;
+    }
+
+    &--content {
+        max-width: $content-max-width;
+    }
+}

@@ -1,0 +1,68 @@
+{% macro progress( percentage, type="large", bgColor="--surface-surface-background", info=null, isPercentage = true) %} {# large, medium, small #}
+    {% if bgColor %}
+        {% set bgColor = bgColor %}
+    {% else %}
+        {% set bgColor = "--surface-surface-background" %}
+    {% endif %}
+    {% if percentage < 0 %} {# Show empty meter #}
+        {% set isEmpty = true %}
+    {% else %}
+        {% set isEmpty = false %}
+    {% endif %}
+
+    {% set calculatedPercentage = percentage %}
+    {% if percentage > 2 %}
+        {% set calculatedPercentage = percentage-2 %}
+    {% endif %}
+    {% if type == "large" %}
+        {% set size = 180 %}
+        {% set strokeWidth = 14 %}
+        {% set headingSize = 1 %}
+    {% elseif type == "medium" %}
+        {% set size = 90 %}
+        {% set strokeWidth = 10 %}
+        {% set headingSize = 2 %}
+    {% else %}
+        {% set size = 50 %}
+        {% set strokeWidth = 6 %}
+        {% set headingSize = 5 %}
+    {% endif %}
+    {% set r = (size-strokeWidth)/2 %}
+    {% set strokeLength = (2*3.14*r) %}
+
+    <div
+            class="circle-progress circle-progress--{{ type }} circle-progress--red {% if percentage >= 25 %}circle-progress--orange{% endif %} {% if percentage >= 75 %}circle-progress--green{% endif %}"
+            style="--size: {{ size }}px; --border-width: {{ strokeWidth }}px; --bg-color: var({{ bgColor }});"
+    >
+        {% if not isEmpty %}
+            {% if info is not null %}
+                <span class="circle-progress__info text-secondary"
+                      data-tippy-content="{{ info }}">{{ source('@svg/info.svg') }}</span>
+                <div>
+
+                </div>
+            {% endif %}
+            <div class="circle-progress__number heading-{{ headingSize }}">{{ percentage | round }} {% if isPercentage %}%{% endif %}</div>
+        {% endif %}
+        <div class="circle-progress__base"></div>
+        {% if not isEmpty %}
+            <svg
+                    viewBox="0 0 {{ size }} {{ size }}"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="circle-progress__meter"
+                    stroke-width="{{ strokeWidth }}px"
+                    stroke-dasharray="{{ strokeLength }}"
+                    stroke-dashoffset="{{ strokeLength }}"
+                    style="--progress: {{ strokeLength-strokeLength*(calculatedPercentage/100) }};"
+            >
+                <circle
+                        id="circle" cx="50%" cy="50%" r="{{ r }}"
+                        stroke-linecap="round"
+                />
+            </svg>
+        {% endif %}
+        <div class="circle-progress__stop circle-progress__stop--25"></div>
+        <div class="circle-progress__stop circle-progress__stop--50"></div>
+        <div class="circle-progress__stop circle-progress__stop--75"></div>
+    </div>
+{% endmacro %}

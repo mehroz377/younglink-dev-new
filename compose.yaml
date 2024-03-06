@@ -1,0 +1,68 @@
+version: "3.4"
+
+services:
+  php:
+    build:
+      context: .
+      target: symfony_php
+      args:
+        SYMFONY_VERSION: ${SYMFONY_VERSION:-}
+        STABILITY: ${STABILITY:-stable}
+      dockerfile: Dockerfile.dev
+    restart: unless-stopped
+    depends_on:
+      - database
+    volumes:
+      - php_socket:/var/run/php
+    healthcheck:
+      interval: 10s
+      timeout: 3s
+      retries: 3
+      start_period: 30s
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
+      # Run "composer require symfony/mercure-bundle" to install and configure the Mercure integration
+      MERCURE_PUBLISH_URL: ${MERCURE_URL:-http://caddy/.well-known/mercure}
+      SYMFONY_VERSION:
+
+  caddy:
+    build:
+      context: .
+      target: symfony_caddy
+      dockerfile: Dockerfile.dev
+    depends_on:
+      - php
+    environment:
+      SERVER_NAME: "http://localhost"
+      MERCURE_PUBLISHER_JWT_KEY: ${MERCURE_PUBLISHER_JWT_KEY:-!ChangeMe!}
+      MERCURE_SUBSCRIBER_JWT_KEY: ${MERCURE_SUBSCRIBER_JWT_KEY:-!ChangeMe!}
+    restart: unless-stopped
+    volumes:
+      - php_socket:/var/run/php
+      - caddy_data:/data
+      - caddy_config:/config
+    ports:
+      - target: 80
+        published: 80
+        protocol: tcp
+
+  ###> doctrine/doctrine-bundle ###
+  database:
+    image: mysql:${MYSQL_VERSION}
+    environment:
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    volumes:
+      - database_data:/var/lib/mysql:rw
+###< doctrine/doctrine-bundle ###
+
+volumes:
+  php_socket:
+  caddy_data:
+  caddy_config:
+
+  ###> doctrine/doctrine-bundle ###
+  database_data:
+###< doctrine/doctrine-bundle ###

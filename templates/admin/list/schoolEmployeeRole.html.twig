@@ -1,0 +1,12 @@
+{% extends '@SonataAdmin/CRUD/base_list_field.html.twig' %}
+{% block field %}
+    {% if object.schoolEmployeeRole == constant('App\\Enum\\SchoolEmployeeRole::DIRECTOR').value %}
+    Ředitel
+    {% elseif object.schoolEmployeeRole == constant('App\\Enum\\SchoolEmployeeRole::ADMINISTRATOR').value %}
+    Administrátor
+    {% elseif object.schoolEmployeeRole == constant('App\\Enum\\SchoolEmployeeRole::PSYCHOLOGIST').value %}
+    Školní psycholog
+    {% elseif object.schoolEmployeeRole == constant('App\\Enum\\SchoolEmployeeRole::TEACHER').value %}
+    Učitel
+    {% endif %}
+{% endblock %}

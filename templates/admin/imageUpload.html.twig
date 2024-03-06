@@ -1,0 +1,30 @@
+{% extends "@!SonataAdmin/Form/form_admin_fields.html.twig" %}
+
+{% block image_file_with_preview_widget %}
+    <div class="col-md-12">
+        <div class="row">
+            {% if form.parent.vars.data[_context.data_attribute] is defined %}
+                {% set savedFile =  form.parent.vars.data[_context.data_attribute] %}
+            {% else %}
+                {% if form.parent.vars.data.image is defined %}
+                    {% set savedFile =  form.parent.vars.data.image %}
+                {% endif %}
+            {% endif %}
+            {% if savedFile is defined %}
+
+                <div class="col-md-3 form-group"><b>Nahraný soubor: </b><img src="{{ savedFile }}" style="max-width: 500px;"></div>
+            {% endif %}
+            <div class="col-md-12">
+                {% block form_widget_simple %}
+                    {% set type = type|default('text') %}
+                    {% if type != 'file' %}
+                        {% set attr = attr|merge({'class': attr.class|default('') ~ ' form-control'}) %}
+                    {% endif %}
+                    {{ parent() }}
+                {% endblock form_widget_simple %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+

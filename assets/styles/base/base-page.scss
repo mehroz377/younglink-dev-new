@@ -1,0 +1,18 @@
+.base-page {
+    width: 100%;
+    padding: 0 var(--spacing-100, 24px);
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 368px auto;
+
+    &__aside {
+        flex-shrink: 0;
+        width: 320px;
+        position: relative;
+        padding-top: var(--spacing-100, 24px);
+    }
+
+    &__content {
+        width: 100%;
+    }
+}

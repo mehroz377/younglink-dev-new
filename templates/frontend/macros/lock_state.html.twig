@@ -1,0 +1,5 @@
+{% macro isLocked( isLocked ) %}
+    <div class="lock-state {% if not isLocked %}lock-state--unlocked{% endif %} {% if isLocked %}lock-state--locked{% endif %} text-light">
+        {{ source('@svg/lock.svg') }}
+    </div>
+{% endmacro %}

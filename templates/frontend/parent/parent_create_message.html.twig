@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    Parent Dashboard
+    {% if guardian is not null %}
+        Firstname: {{ guardian.firstname }}<br>
+        Lastname: {{ guardian.lastname }}<br>
+        Email: {{ guardian.email }}<br>
+
+        Student:
+        Info<br>
+        School: {{ student.school }}<br>
+        Classroom: {{ student.classroom }}<br>
+        Firstname: {{ student.firstname }}<br>
+        Lastname: {{ student.lastname }}<br>
+        Email: {{ student.email }}<br>
+    {% endif %}
+
+    Nová zpráva
+
+    {{ form_start(form) }}
+        {{ form_row(form.target) }}
+        {{ form_row(form.messageText) }}
+        {{ form_row(form.submit) }}
+    {{ form_end(form) }}
+{% endblock %}

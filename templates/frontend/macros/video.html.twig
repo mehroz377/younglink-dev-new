@@ -1,0 +1,15 @@
+{% macro video( videoLink, coverImg, text ) %}
+    <div class="video rectangle rectangle--l rectangle--no-padding overflow-hidden">
+        <a href="{{videoLink}}" class="no-decoration">
+            <div class="position-relative">
+                <img src="{{coverImg}}" alt="" class="img-sizing">
+                <div class="button button--primary position-absolute video__play">
+                    {{ source('@svg/play.svg') }}
+                </div>
+            </div>
+            <div class="p-100 heading-5 text-dark">
+                Lorem ipsum dolor sit amet consectetur. In consectetur aliquam aliquet lorem volutpat.
+            </div>
+        </a>
+    </div>
+{% endmacro %}

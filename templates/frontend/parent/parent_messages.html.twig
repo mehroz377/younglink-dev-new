@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    Parent Dashboard
+    {% if guardian is not null %}
+    Firstname: {{ guardian.firstname }}<br>
+    Lastname: {{ guardian.lastname }}<br>
+    Email: {{ guardian.email }}<br>
+
+    Student:
+            Info<br>
+            School: {{ student.school }}<br>
+            Classroom: {{ student.classroom }}<br>
+            Firstname: {{ student.firstname }}<br>
+            Lastname: {{ student.lastname }}<br>
+            Email: {{ student.email }}<br>
+
+    Messages:
+        <a href="{{ path('app_parent_messages_create') }}">Vytvořit novou zprávu</a>
+        {% for message in messages %}
+            {% if message.from == app.user %}
+{#            TODO vyřešit výpis jména - podle přihlášeného usera, až po loginu#}
+            {% endif %}
+            {{ message.createdAt|date('d-m-Y') }}<br>
+            {{ message.from }}<br>
+            {{ message.to }}<br>
+            <a href="{{ path('app_parent_message_detail',{'id': student.id,'message': message.id}) }}">
+                {{ message.messages.first.messageText }}
+            </a>
+        {% endfor %}
+
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "@!SonataAdmin/Form/form_admin_fields.html.twig" %}
+
+{% block file_upload_widget %}
+    {% if form.parent.vars.data is iterable %}
+        {% set savedFile =  form.parent.vars.data[_context.data_attribute] %}
+    {% endif %}
+    {% if savedFile %}
+    <b>Nahraný soubor: </b>{{ savedFile }}
+    {% endif %}
+    {% block form_widget_simple %}
+            {% set type = type|default('text') %}
+            {% if type != 'file' %}
+                {% set attr = attr|merge({'class': attr.class|default('') ~ ' form-control'}) %}
+            {% endif %}
+            {{ parent() }}
+    {% endblock form_widget_simple %}
+{% endblock %}
+
+

@@ -1,0 +1,19 @@
+{% import "frontend/macros/page_header.html.twig" as header %}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container container--full-page">
+        <div class="base-page">
+            <div class="base-page__aside">
+                {% include 'frontend/includes/page_aside.html.twig' %}
+            </div>
+            <div class="base-page__content">
+            {{ header.header("Franta Novák", 1, true, "Reporty") }}
+                <div class="container container--content">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

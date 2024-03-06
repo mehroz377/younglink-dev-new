@@ -1,0 +1,127 @@
+# This file is the entry point to configure your own services.
+# Files in the packages/ subdirectory configure your dependencies.
+
+# Put parameters here that don't need to change on each machine where the app is deployed
+# https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
+parameters:
+    locale: 'cs'
+    app_locales: 'cs'
+
+    file_uploader_setting:
+        target_path: '%kernel.project_dir%/public/uploads'
+        web_path: '/uploads'
+
+services:
+    # default configuration for services in *this* file
+    _defaults:
+        autowire: true      # Automatically injects dependencies in your services.
+        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+
+    # makes classes in src/ available to be used as services
+    # this creates a service per class whose id is the fully-qualified class name
+    App\:
+        resource: '../src/'
+        exclude:
+            - '../src/DependencyInjection/'
+            - '../src/Entity/'
+            - '../src/Kernel.php'
+
+    # add more service definitions when explicit configuration is needed
+    # please note that last definitions always *replace* previous ones
+
+    App\Admin\SchoolAdmin:
+        class: App\Admin\SchoolAdmin
+        arguments: [ ~, App\Entity\School, ~ ]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: 'Obsah', label: 'Školy', global_search: true, show_mosaic_button: false, priority: 20 }
+        public: true
+
+    App\Admin\SchoolEmployeeAdmin:
+        class: App\Admin\SchoolEmployeeAdmin
+        arguments: [ ~, App\Entity\SchoolEmployee, ~ ]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: 'Obsah', label: 'Zaměstnanci škol', show_mosaic_button: false, priority: 15 }
+        public: true
+
+    App\Admin\ClassroomAdmin:
+        class: App\Admin\ClassroomAdmin
+        arguments: [ ~, App\Entity\Classroom, ~ ]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: 'Obsah', label: 'Třídy', show_mosaic_button: false, priority: 10 }
+        public: true
+
+    App\Admin\StudentAdmin:
+        class: App\Admin\StudentAdmin
+        arguments: [ ~, App\Entity\Student, ~ ]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: 'Obsah', label: 'Studenti', show_mosaic_button: false, priority: 5 }
+        public: true
+
+
+    App\Admin\GuardianAdmin:
+        class: App\Admin\GuardianAdmin
+        arguments: [ ~, App\Entity\Guardian, ~ ]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: 'Obsah', label: 'Rodiče', show_mosaic_button: false, priority: 1 }
+        public: true
+
+    App\Admin\SchoolYearAdmin:
+        class: App\Admin\SchoolYearAdmin
+        arguments: [ ~, App\Entity\SchoolYear, ~ ]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: 'Systém', label: 'Školní rok', show_mosaic_button: false, priority: 10 }
+        public: true
+
+    App\Admin\TimelineAdmin:
+        class: App\Admin\TimelineAdmin
+        arguments: [ ~, App\Entity\Timeline, ~ ]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: 'Systém', label: 'Časová osa', show_mosaic_button: false, priority: 5 }
+        public: true
+
+    App\Admin\QuestionnaireAdmin:
+        class: App\Admin\QuestionnaireAdmin
+        arguments: [ ~, App\Entity\Questionnaire, ~ ]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: 'Systém', label: 'Dotazník', show_mosaic_button: false, priority: 2 }
+        public: true
+
+    App\Admin\DistrictAdmin:
+        class: App\Admin\DistrictAdmin
+        arguments: [ ~, App\Entity\District, ~ ]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: 'Systém', label: 'Okres', show_mosaic_button: false, priority: 1 }
+        public: true
+
+    App\Admin\ProfessionalHelp\ProfessionalHelpArticleAdmin:
+        class: App\Admin\ProfessionalHelp\ProfessionalHelpArticleAdmin
+        arguments: [ ~, App\Entity\ProfessionalHelp\ProfessionalHelpArticle, ~ ]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: 'Odborná pomoc', label: 'Článek', show_mosaic_button: false, priority: 10 }
+        public: true
+
+    App\Admin\ProfessionalHelp\ProfessionalHelpExpertAdmin:
+        class: App\Admin\ProfessionalHelp\ProfessionalHelpExpertAdmin
+        arguments: [ ~, App\Entity\ProfessionalHelp\ProfessionalHelpExpert, ~ ]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: 'Odborná pomoc', label: 'Expert', show_mosaic_button: false, priority: 9 }
+        public: true
+
+    App\Admin\ProfessionalHelp\ProfessionalHelpExpertLabelAdmin:
+        class: App\Admin\ProfessionalHelp\ProfessionalHelpExpertLabelAdmin
+        arguments: [ ~, App\Entity\ProfessionalHelp\ProfessionalHelpExpertLabel, ~ ]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: 'Odborná pomoc', label: 'Expert - štítky', show_mosaic_button: false, priority: 8 }
+        public: true
+
+    App\Admin\ProfessionalHelp\ProfessionalHelpVideoAdmin:
+        class: App\Admin\ProfessionalHelp\ProfessionalHelpVideoAdmin
+        arguments: [ ~, App\Entity\ProfessionalHelp\ProfessionalHelpVideo, ~ ]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: 'Odborná pomoc', label: 'Video', show_mosaic_button: false, priority: 7 }
+        public: true
+
+    App\Service\FileUploader:
+        class: App\Service\FileUploader
+        arguments: [ '%file_uploader_setting%' ]
+

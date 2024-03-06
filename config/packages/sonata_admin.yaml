@@ -1,0 +1,17 @@
+sonata_admin:
+    title: ' '
+    title_logo: img/logo.svg
+    dashboard:
+        blocks:
+            - { type: sonata.admin.block.admin_list, position: left }
+    templates:
+        edit: adminOverrides/edit.html.twig
+        list: '@SonataAdmin/CRUD/list.html.twig'
+    global_search:
+        empty_boxes: fade
+        admin_route: edit
+
+sonata_block:
+    blocks:
+        sonata.admin.block.admin_list:
+            contexts: [admin]

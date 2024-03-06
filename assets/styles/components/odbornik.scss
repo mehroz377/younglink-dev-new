@@ -1,0 +1,15 @@
+.odbornik {
+    &__label {
+        padding: var(--spacing-16, 4px) var(--spacing-25, 6px);
+        border-radius: var(--Radius-XS, 6px);
+        background: var(--Surface-surface-background, #F6F6F6);
+    }
+
+    &__img {
+        border-radius: 140px;
+        width: 140px;
+        height: 140px;
+        object-fit: cover;
+        
+    }
+}

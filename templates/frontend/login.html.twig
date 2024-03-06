@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="login">
+        <div class="login__rectangle">
+            <a href="#" class="login__logo"> {# TODO: Add link here #}
+                <img src="{{ asset('build/images/logo.svg') }}" alt="YoungLink logo"/>
+            </a>
+            <div class="form__row">
+                <h1 class="heading-2 align-center">Přihlásit se</h1>
+            </div>
+            <div class="login__form">
+                <form> {# You can remove or adjust this tag #}
+                    <div class="form__row">
+                        <input class="form__input form__input--full" type="text" placeholder="Login">
+                    </div>
+                    <div class="form__row">
+                        <div>
+                            <input class="form__input form__input--full" type="password" placeholder="Heslo">
+                        </div>
+                        <div class="align-right">
+                            <a href="#" class="form__additional-link">Zapomenuté heslo</a> {# TODO: Add link here #}
+                        </div>
+                    </div>
+                    <div class="form__row align-center">
+                        <button class="button button--m button--primary">Přihlásit se</button>
+                    </div>
+                </form> 
+            </div>
+        </div>
+    </div>
+{% endblock %}
